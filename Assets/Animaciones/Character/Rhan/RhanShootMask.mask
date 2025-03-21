@@ -1,0 +1,369 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: RhanShootMask
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Armature
+    m_Weight: 0
+  - m_Path: Armature/L.Hip
+    m_Weight: 0
+  - m_Path: Armature/L.Hip/L.Thigh
+    m_Weight: 1
+  - m_Path: Armature/L.Hip/L.Thigh/L.Shin
+    m_Weight: 1
+  - m_Path: Armature/L.Hip/L.Thigh/L.Shin/L.Foot
+    m_Weight: 1
+  - m_Path: Armature/L.Strap01_004
+    m_Weight: 0
+  - m_Path: Armature/L.Strap01_005
+    m_Weight: 0
+  - m_Path: Armature/Main
+    m_Weight: 0
+  - m_Path: Armature/Main/Hip_Control
+    m_Weight: 0
+  - m_Path: Armature/Main/Hip_Control/Hip
+    m_Weight: 0
+  - m_Path: Armature/Main/Hip_Control/Hip/L.Pocket
+    m_Weight: 0
+  - m_Path: Armature/Main/Hip_Control/Hip/L.Strap02_001
+    m_Weight: 0
+  - m_Path: Armature/Main/Hip_Control/Hip/L.Strap02_001/L.Strap02_002
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/L.Strap02_001/L.Strap02_002/L.Strap02_003
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/L.Strap02_001/L.Strap02_002/L.Strap02_003/L.Strap02_004
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/L.Strap02_010
+    m_Weight: 0
+  - m_Path: Armature/Main/Hip_Control/Hip/L.Strap02_010/L.Strap02_009
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/L.Strap02_010/L.Strap02_009/L.Strap02_008
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/L.Strap02_010/L.Strap02_009/L.Strap02_008/L.Strap02_007
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/L.Strap02_010/L.Strap02_009/L.Strap02_008/L.Strap02_007/L.Strap02_006
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/L.Strap02_010/L.Strap02_009/L.Strap02_008/L.Strap02_007/L.Strap02_006/L.Strap02_005
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/R.Pocket
+    m_Weight: 0
+  - m_Path: Armature/Main/Hip_Control/Hip/R.Strap02_001
+    m_Weight: 0
+  - m_Path: Armature/Main/Hip_Control/Hip/R.Strap02_001/R.Strap02_002
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/R.Strap02_001/R.Strap02_002/R.Strap02_003
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/R.Strap02_001/R.Strap02_002/R.Strap02_003/R.Strap02_004
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/R.Strap02_010
+    m_Weight: 0
+  - m_Path: Armature/Main/Hip_Control/Hip/R.Strap02_010/R.Strap02_009
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/R.Strap02_010/R.Strap02_009/R.Strap02_008
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/R.Strap02_010/R.Strap02_009/R.Strap02_008/R.Strap02_007
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/R.Strap02_010/R.Strap02_009/R.Strap02_008/R.Strap02_007/R.Strap02_006
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/R.Strap02_010/R.Strap02_009/R.Strap02_008/R.Strap02_007/R.Strap02_006/R.Strap02_005
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01
+    m_Weight: 0
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/C.Waterproof_01_01
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/C.Waterproof_02_01
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/L.Waterproof_01_01
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/L.Waterproof_02_01
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/L.Waterproof_03_01
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/L.Waterproof_03_02
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/L.Waterproof_04_01
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/L.Waterproof_05_01
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/L.Waterproof_06_01
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/R.Waterproof_01_01
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/R.Waterproof_02_01
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/R.Waterproof_03_01
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/R.Waterproof_04_01
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/R.Waterproof_05_01
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/R.Waterproof_06_01
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/R.Waterproof_07_01
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/C.Waterproof_01_02
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/C.Waterproof_02_02
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/L.Waterproof_01_02
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/L.Waterproof_02_02
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/L.Waterproof_04_02
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/L.Waterproof_05_02
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/L.Waterproof_06_02
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/R.Waterproof_01_02
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/R.Waterproof_02_02
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/R.Waterproof_03_02
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/R.Waterproof_04_02
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/R.Waterproof_05_02
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/R.Waterproof_06_02
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/R.Waterproof_07_02
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/SkirtC_03
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/SkirtC_03/C.Waterproof_01_03
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/SkirtC_03/C.Waterproof_02_03
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/SkirtC_03/L.Waterproof_01_03
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/SkirtC_03/L.Waterproof_02_03
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/SkirtC_03/L.Waterproof_03_03
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/SkirtC_03/L.Waterproof_04_03
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/SkirtC_03/L.Waterproof_05_03
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/SkirtC_03/L.Waterproof_06_03
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/SkirtC_03/R.Waterproof_01_03
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/SkirtC_03/R.Waterproof_02_03
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/SkirtC_03/R.Waterproof_03_03
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/SkirtC_03/R.Waterproof_04_03
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/SkirtC_03/R.Waterproof_05_03
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/SkirtC_03/R.Waterproof_06_03
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/SkirtC_03/R.Waterproof_07_03
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/SkirtC_03/SkirtC_04
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/SkirtC_03/SkirtC_04/C.Waterproof_01_04
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/SkirtC_03/SkirtC_04/C.Waterproof_02_04
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/SkirtC_03/SkirtC_04/L.Waterproof_01_04
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/SkirtC_03/SkirtC_04/L.Waterproof_02_04
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/SkirtC_03/SkirtC_04/L.Waterproof_03_04
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/SkirtC_03/SkirtC_04/L.Waterproof_04_04
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/SkirtC_03/SkirtC_04/L.Waterproof_05_04
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/SkirtC_03/SkirtC_04/L.Waterproof_06_04
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/SkirtC_03/SkirtC_04/R.Waterproof_01_04
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/SkirtC_03/SkirtC_04/R.Waterproof_02_04
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/SkirtC_03/SkirtC_04/R.Waterproof_03_04
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/SkirtC_03/SkirtC_04/R.Waterproof_04_04
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/SkirtC_03/SkirtC_04/R.Waterproof_05_04
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/SkirtC_03/SkirtC_04/R.Waterproof_06_04
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/SkirtC_01/SkirtC_02/SkirtC_03/SkirtC_04/R.Waterproof_07_04
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Hip/Spine
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/L.ElbowIK
+    m_Weight: 0
+  - m_Path: Armature/Main/Hip_Control/L.HandIK
+    m_Weight: 0
+  - m_Path: Armature/Main/Hip_Control/L.KneeIK
+    m_Weight: 0
+  - m_Path: Armature/Main/Hip_Control/L.ShinIK
+    m_Weight: 0
+  - m_Path: Armature/Main/Hip_Control/L.Strap_Elbow_01
+    m_Weight: 0
+  - m_Path: Armature/Main/Hip_Control/L.Strap_Elbow_02
+    m_Weight: 0
+  - m_Path: Armature/Main/Hip_Control/R.ElbowIK
+    m_Weight: 0
+  - m_Path: Armature/Main/Hip_Control/R.HandIK
+    m_Weight: 0
+  - m_Path: Armature/Main/Hip_Control/R.KneeIK
+    m_Weight: 0
+  - m_Path: Armature/Main/Hip_Control/R.ShinIK
+    m_Weight: 0
+  - m_Path: Armature/Main/Hip_Control/R.Strap_Elbow_01
+    m_Weight: 0
+  - m_Path: Armature/Main/Hip_Control/R.Strap_Elbow_02
+    m_Weight: 0
+  - m_Path: Armature/Main/Hip_Control/Spine_Control
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/L.Clavicle
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/L.Clavicle/L.UpperArm
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/L.Clavicle/L.UpperArm/L.Arm
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/L.Clavicle/L.UpperArm/L.Arm/L.Hand
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/L.Clavicle/L.UpperArm/L.Arm/L.Hand/L.Index_Finger_01
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/L.Clavicle/L.UpperArm/L.Arm/L.Hand/L.Index_Finger_01/L.Index_Finger_02
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/L.Clavicle/L.UpperArm/L.Arm/L.Hand/L.Index_Finger_01/L.Index_Finger_02/L.Index_Finger_03
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/L.Clavicle/L.UpperArm/L.Arm/L.Hand/L.Middle_Finger_01
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/L.Clavicle/L.UpperArm/L.Arm/L.Hand/L.Middle_Finger_01/L.Middle_Finger_02
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/L.Clavicle/L.UpperArm/L.Arm/L.Hand/L.Middle_Finger_01/L.Middle_Finger_02/L.Middle_Finger_03
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/L.Clavicle/L.UpperArm/L.Arm/L.Hand/L.Pinky_Finger_01
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/L.Clavicle/L.UpperArm/L.Arm/L.Hand/L.Pinky_Finger_01/L.Pinky_Finger_02
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/L.Clavicle/L.UpperArm/L.Arm/L.Hand/L.Pinky_Finger_01/L.Pinky_Finger_02/L.Pinky_Finger_03
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/L.Clavicle/L.UpperArm/L.Arm/L.Hand/L.Thumb_Finger_01
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/L.Clavicle/L.UpperArm/L.Arm/L.Hand/L.Thumb_Finger_01/L.Thumb_Finger_02
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/L.Clavicle/L.UpperArm/L.Arm/L.Hand/L.Thumb_Finger_01/L.Thumb_Finger_02/L.Thumb_Finger_03
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/L.Clavicle/L.UpperArm/L.UpperArmStrap
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/L.Strap01_001
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/L.Strap01_001/L.Strap01_002
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/L.Strap01_001/L.Strap01_002/L.Strap01_003
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/L.Strap01_011
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/L.Strap01_011/L.Strap01_010
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/L.Strap01_011/L.Strap01_010/L.Strap01_009
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/L.Strap01_011/L.Strap01_010/L.Strap01_009/L.Strap01_008
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/L.Strap01_011/L.Strap01_010/L.Strap01_009/L.Strap01_008/L.Strap01_007
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/L.Strap01_011/L.Strap01_010/L.Strap01_009/L.Strap01_008/L.Strap01_007/L.Strap01_006
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/Neck
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/Neck/Head
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/R.Clavicle
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/R.Clavicle/R.UpperArm
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/R.Clavicle/R.UpperArm/R.Arm
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/R.Clavicle/R.UpperArm/R.Arm/R.Hand
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/R.Clavicle/R.UpperArm/R.Arm/R.Hand/R.Index_Finger_01
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/R.Clavicle/R.UpperArm/R.Arm/R.Hand/R.Index_Finger_01/R.Index_Finger_02
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/R.Clavicle/R.UpperArm/R.Arm/R.Hand/R.Index_Finger_01/R.Index_Finger_02/R.Index_Finger_03
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/R.Clavicle/R.UpperArm/R.Arm/R.Hand/R.Middle_Finger_01
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/R.Clavicle/R.UpperArm/R.Arm/R.Hand/R.Middle_Finger_01/R.Middle_Finger_02
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/R.Clavicle/R.UpperArm/R.Arm/R.Hand/R.Middle_Finger_01/R.Middle_Finger_02/R.Middle_Finger_03
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/R.Clavicle/R.UpperArm/R.Arm/R.Hand/R.Pinky_Finger_01
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/R.Clavicle/R.UpperArm/R.Arm/R.Hand/R.Pinky_Finger_01/R.Pinky_Finger_02
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/R.Clavicle/R.UpperArm/R.Arm/R.Hand/R.Pinky_Finger_01/R.Pinky_Finger_02/R.Pinky_Finger_03
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/R.Clavicle/R.UpperArm/R.Arm/R.Hand/R.Thumb_Finger_01
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/R.Clavicle/R.UpperArm/R.Arm/R.Hand/R.Thumb_Finger_01/R.Thumb_Finger_02
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/R.Clavicle/R.UpperArm/R.Arm/R.Hand/R.Thumb_Finger_01/R.Thumb_Finger_02/R.Thumb_Finger_03
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/R.Clavicle/R.UpperArm/R.UpperArmStrap
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/R.Strap01_001
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/R.Strap01_001/R.Strap01_002
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/R.Strap01_001/R.Strap01_002/R.Strap01_003
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/R.Strap01_011
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/R.Strap01_011/R.Strap01_010
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/R.Strap01_011/R.Strap01_010/R.Strap01_009
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/R.Strap01_011/R.Strap01_010/R.Strap01_009/R.Strap01_008
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/R.Strap01_011/R.Strap01_010/R.Strap01_009/R.Strap01_008/R.Strap01_007
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/R.Strap01_011/R.Strap01_010/R.Strap01_009/R.Strap01_008/R.Strap01_007/R.Strap01_006
+    m_Weight: 1
+  - m_Path: Armature/Main/Hip_Control/Spine_Control/Spine01/SpineBackPack
+    m_Weight: 1
+  - m_Path: Armature/R.Hip
+    m_Weight: 0
+  - m_Path: Armature/R.Hip/R.Thigh
+    m_Weight: 1
+  - m_Path: Armature/R.Hip/R.Thigh/R.Shin
+    m_Weight: 1
+  - m_Path: Armature/R.Hip/R.Thigh/R.Shin/R.Foot
+    m_Weight: 1
+  - m_Path: Armature/R.Strap01_004
+    m_Weight: 0
+  - m_Path: Armature/R.Strap01_005
+    m_Weight: 0
+  - m_Path: Body
+    m_Weight: 0
+  - m_Path: Bolsillo
+    m_Weight: 0
+  - m_Path: Cabello
+    m_Weight: 0
+  - m_Path: Face
+    m_Weight: 0
+  - m_Path: Impermeable
+    m_Weight: 0
+  - m_Path: Mochila
+    m_Weight: 0
