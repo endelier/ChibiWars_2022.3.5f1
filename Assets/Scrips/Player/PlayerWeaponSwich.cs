@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
-public class WeaponSwich : MonoBehaviour
+public class PlayerWeaponSwich : MonoBehaviour
 {
-    
+
     public GameObject[] weapons;
 
     private int selectedWeapon=0;
@@ -18,7 +17,8 @@ public class WeaponSwich : MonoBehaviour
 
 
     void Start()
-    {
+    { 
+        
         weapons[0].transform.SetParent(hand);
         weapons[0].transform.position = hand.position;
         weapons[0].transform.rotation = hand.transform.rotation;

@@ -74,7 +74,8 @@ public class GameManager : MonoBehaviour
     //Si la vida es 0, se reinicia el nivel
     public void SaveHealt(){
         if(healt<=0){
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            Debug.Log("Has muerto");
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
