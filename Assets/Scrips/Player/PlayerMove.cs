@@ -177,15 +177,16 @@ public class PlayerMove : MonoBehaviour
 
     private void RotationShoot(){
         
+        //Disparar sin mira
         //si aplasta click izquierdo y si magnitud de mover es 0 - rota a donde mira la camara
-        if(Input.GetMouseButtonDown(0) && direction.magnitude == 0f){
-            
+        if(Input.GetMouseButtonDown(0) && direction.magnitude == 0f && Time.timeScale != 0){
             characterController.transform.rotation =  Quaternion.LookRotation(Vector3.RotateTowards(characterController.transform.forward, angleRotationShoot, rotationSpeedShoot, 0f));//rotando al jugador
 
         }
-        //si aplasta click izquierdo y si magnitud de mover es 0 - rota a donde mira la camara
-        if(Input.GetMouseButton(1) && direction.magnitude == 0f){
-            
+
+        //Poner la mira
+        //si aplasta click derecho y si magnitud de mover es 0 - rota a donde mira la camara
+        if(Input.GetMouseButton(1) && direction.magnitude == 0f && Time.timeScale != 0){
             characterController.transform.rotation =  Quaternion.LookRotation(Vector3.RotateTowards(characterController.transform.forward, angleRotationShoot, rotationSpeedShoot, 0f));//rotando al jugador
 
         }

@@ -34,10 +34,11 @@ public class PlayerInterations : MonoBehaviour
         
     }
 
+    //Si recive un disparo
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.CompareTag("EnemyBullet")){
-            GameManager.Instance.LoseHealth(5);
+            GameManager.Instance.LoseHealth(25);
         }
     }
 }

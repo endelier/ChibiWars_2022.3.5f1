@@ -60,7 +60,7 @@ public class Weapon : MonoBehaviour
         
         barrelPos.LookAt(aim.aimpos);//el barril mira hacia donde esta el puntero
 
-        if(Input.GetMouseButton(0) && fireRateTimer > fireRate && GameManager.Instance.gunAmmo > 0){
+        if(Input.GetMouseButton(0) && fireRateTimer > fireRate && GameManager.Instance.gunAmmo > 0 && Time.timeScale != 0){
                 
             fireRateTimer = 0;//reinica el cronometro
 

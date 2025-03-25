@@ -23,8 +23,8 @@ public class Enemy : MonoBehaviour
 
 
     //cambiar color
-    [SerializeField]private float cronometer = 2.5f;
-    [SerializeField]private bool accion=false;
+    private float cronometer = 2.5f;
+    private bool accion=false;
 
 
     void Start()
@@ -38,6 +38,7 @@ public class Enemy : MonoBehaviour
         distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
 
         if(distanceToPlayer <= distanceToFollowPlayer && followplayer){
+            Debug.Log("Siguindo");
             FollowPlyer();
         }
         else{
@@ -70,7 +71,7 @@ public class Enemy : MonoBehaviour
     }
 
 
-    //funcion cromonetrada
+    //funcion de cronometro para regresarle el color
     private void Cronometer(){
 
         //si recivio la bala
@@ -86,7 +87,7 @@ public class Enemy : MonoBehaviour
 
             //si el cronometro es 2.5f cambia de color a rojo
             if(cronometer == 2.5f){
-                GetComponent<Renderer>().material.color = new Color(255,0,0);
+                GetComponentInChildren<Renderer>().material.color = new Color(255,0,0);
 
                 //cambia accion a falso de que no a recivido bala
                 accion=false;
@@ -102,7 +103,7 @@ public class Enemy : MonoBehaviour
         if(collision.gameObject.CompareTag("Bullet")){
 
             //cambia de color a verde
-            GetComponent<Renderer>().material.color = new Color(0,255,0);
+            GetComponentInChildren<Renderer>().material.color = new Color(0,255,0);
 
             //destruye la bala
             Destroy(collision.gameObject);

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.UI;
 
 public class PlayerAim : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class PlayerAim : MonoBehaviour
     public PlayerCamera centerPlayer;//centerPlayer
     private Animator animator;//animador del personaje-se referencia en el Start
     private PlayerMove mover;//Codigo de mover del personaje-se referencia en el Start
+
+    public Image crosshair;
 
     //aim
     [Header("Aim")]
@@ -67,13 +70,23 @@ public class PlayerAim : MonoBehaviour
 
             //se le da posicion de la bolita donde esta el aim, posicion, hit, velocidad de pocicion
             aimpos.position = Vector3.Lerp(aimpos.position, hit.point, aimshootspeed * Time.deltaTime);
+
+            //La mi cambia de color a rojo si se posiciona sobre el enemigo 
+            if(hit.collider.CompareTag("Enemy")){
+                crosshair.GetComponent<Image>().color = new Color(255,0,0);
+            }
+            else{
+                //Sino se queda en blanco
+                crosshair.GetComponent<Image>().color = new Color(255,255,255);
+            }
         }
+
     }
 
     private void Zoom(){
 
         //si se aplasta click derecho
-        if(Input.GetMouseButton(1)){
+        if(Input.GetMouseButton(1) && Time.timeScale != 0){
             //se le suma a la camara en el lens en su fov la velocidad
             cameraVirtual.m_Lens.FieldOfView -=smoothSpeed; 
         }

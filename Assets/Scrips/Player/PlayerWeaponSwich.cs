@@ -18,7 +18,7 @@ public class PlayerWeaponSwich : MonoBehaviour
 
     void Start()
     { 
-        
+        //reposiciona al inicio del juego en que mano esta cada arma
         weapons[0].transform.SetParent(hand);
         weapons[0].transform.position = hand.position;
         weapons[0].transform.rotation = hand.transform.rotation;

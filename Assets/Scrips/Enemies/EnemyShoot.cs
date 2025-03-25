@@ -8,6 +8,7 @@ public class EnemyShoot : MonoBehaviour
     public Transform spawnBulletPoint;
 
     private Transform playerPosition;
+    private Enemy enemyfollow;
 
     public float bulletSpeed;
 
@@ -16,11 +17,19 @@ public class EnemyShoot : MonoBehaviour
         //busca al jugador y conseuimos su transform
         playerPosition = FindAnyObjectByType<PlayerMove>().transform;
 
+        enemyfollow = GetComponent<Enemy>();
+
         Invoke("ShootEnemy", 3);
     }
 
-    public void ShootEnemy(){
+    void Update()
+    {
+        if(enemyfollow.followplayer == true){
+            //Invoke("ShootEnemy", .5f);
+        }
+    }
 
+    public void ShootEnemy(){
 
         Vector3 playerDirection = playerPosition.position - transform.position;
 
@@ -28,8 +37,8 @@ public class EnemyShoot : MonoBehaviour
 
         newbullet = Instantiate(enemyBullet, spawnBulletPoint.position, spawnBulletPoint.rotation);
 
-        newbullet.GetComponent<Rigidbody>().AddForce(playerDirection*bulletSpeed, ForceMode.Force);
+        newbullet.GetComponent<Rigidbody>().AddForce(playerDirection * bulletSpeed, ForceMode.Force);
 
-        Invoke("ShootEnemy", 3);
+        Invoke("ShootEnemy", .5f);
     }
 }
