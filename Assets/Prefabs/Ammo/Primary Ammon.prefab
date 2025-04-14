@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 751733689610723754}
   - component: {fileID: 8317592173675206517}
   m_Layer: 0
-  m_Name: Ammon Box
-  m_TagString: GunAmmo
+  m_Name: Primary Ammon
+  m_TagString: PrimaryAmmon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6788564200105455281}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -12.338036, y: 0.09046716, z: 5.10157}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

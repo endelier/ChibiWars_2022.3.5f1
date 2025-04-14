@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Weapon : MonoBehaviour
 {
@@ -17,31 +18,56 @@ public class Weapon : MonoBehaviour
     [Header("References")]
     private Animator weaponAnimator;//animador del arma-se referencia en el Start
     private AudioSource audioSource;//complemento que reproduce el sonido al dispara-se referencia en el Start
+    private AmmoCurrent municionCurrent;//texto que marca las balas que se pueden disparar
+    private AmmoMax municionMax;//texto que marca las balas en recerva
 
-    public AudioClip soundSource;
+    public AudioClip soundSource;//sonido al disparar
     [SerializeField]private GameObject bullet;//llama al objeto Arked bullet, o bala de Arked
     [SerializeField]private Transform barrelPos;//posicion del barril
     public float bulletSpeed = 500f;//velocidad de la bala
-    public PlayerAim aim;
+    public PlayerAim aim;//componente PlayerAim del player
 
-    public int municion = 20;
+    public int cargadorEnArma = 20;
+    public int cargadorRecerva=20;
+
+    [HideInInspector]public int maxBalasEnArma = 20;
+    [HideInInspector]public int maxCargadorRecerva=20;
+
+    public bool activo;
+
 
 
     void Start()
     {
+        aim = FindObjectOfType<PlayerAim>();//busca el comppnente PlayerAim del jugador
+
+        municionCurrent = FindAnyObjectByType<AmmoCurrent>();
+        municionMax = FindAnyObjectByType<AmmoMax>();
+
         weaponAnimator = GetComponent<Animator>();//se referencia que el animator es de la misma arma
         audioSource = GetComponent<AudioSource>();//se referencia que el audiosource es de la misma arma
-        GameManager.Instance.gunAmmo = municion;
+        //GameManager.Instance.gunAmmo = municion;
+        
+        municionCurrent.GetComponent<Text>().text = cargadorEnArma.ToString();
+        municionMax.GetComponent<Text>().text = cargadorRecerva.ToString();
     }
+
     void Update()
     {
-        
+        if(activo){
+            DrawAmmo();   
+        }
         SpeedOfEachShot();
         Fire();
         WaponAnimation();
     }
 
+    private void DrawAmmo(){
 
+        municionCurrent.GetComponent<Text>().text = cargadorEnArma.ToString();
+        municionMax.GetComponent<Text>().text = cargadorRecerva.ToString();
+
+    }
     //Cronometro de cada cuanto se puede disparar
     private void SpeedOfEachShot(){
 
@@ -60,7 +86,7 @@ public class Weapon : MonoBehaviour
         
         barrelPos.LookAt(aim.aimpos);//el barril mira hacia donde esta el puntero
 
-        if(Input.GetMouseButton(0) && fireRateTimer > fireRate && GameManager.Instance.gunAmmo > 0 && Time.timeScale != 0){
+        if(Input.GetMouseButton(0) && fireRateTimer > fireRate && /*GameManager.Instance.gunAmmo*/ cargadorEnArma > 0 && Time.timeScale != 0){
                 
             fireRateTimer = 0;//reinica el cronometro
 
@@ -82,7 +108,8 @@ public class Weapon : MonoBehaviour
             }
             
             //le resta una bala a la municion;
-            GameManager.Instance.gunAmmo--;
+            //GameManager.Instance.gunAmmo--;
+            cargadorEnArma--;
         }
 
     }

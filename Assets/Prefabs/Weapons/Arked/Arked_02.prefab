@@ -382,10 +382,9 @@ GameObject:
   - component: {fileID: 5646675477128298240}
   - component: {fileID: 6476266382930689800}
   - component: {fileID: 4237857955891598406}
-  - component: {fileID: 7102383548806188630}
   m_Layer: 0
   m_Name: Arked_02
-  m_TagString: Secondary Weapon
+  m_TagString: SecondaryWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -572,21 +571,9 @@ MonoBehaviour:
   barrelPos: {fileID: 6603846638473025677}
   bulletSpeed: 500
   aim: {fileID: 0}
-  municion: 20
---- !u!114 &7102383548806188630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1469114764465794075}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eca7a4e30acf2484aaf5795928dd4d45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weapon: {fileID: 1469114764465794075}
-  hand: {fileID: 0}
+  cargadorEnArma: 20
+  cargadorRecerva: 40
+  activo: 0
 --- !u!1 &1673586277563276950
 GameObject:
   m_ObjectHideFlags: 0

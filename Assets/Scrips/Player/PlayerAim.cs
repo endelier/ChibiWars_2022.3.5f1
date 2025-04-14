@@ -13,7 +13,7 @@ public class PlayerAim : MonoBehaviour
     private Animator animator;//animador del personaje-se referencia en el Start
     private PlayerMove mover;//Codigo de mover del personaje-se referencia en el Start
 
-    public Image crosshair;
+    public Crosshair crosshair;
 
     //aim
     [Header("Aim")]
@@ -34,8 +34,17 @@ public class PlayerAim : MonoBehaviour
     private bool cronometro;
     private bool disparo = false;
 
+    void Awake()
+    {
+        cameraVirtual = FindObjectOfType<CinemachineVirtualCamera>();
+        centerPlayer = FindObjectOfType<PlayerCamera>();
+        aimpos = GameObject.FindGameObjectWithTag("AimSphere").transform;
+    }
+
     void Start()
     {
+
+        crosshair = FindObjectOfType<Crosshair>();
         animator = GetComponent<Animator>();
         mover = GetComponent<PlayerMove>();
     }

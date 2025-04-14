@@ -1,0 +1,23 @@
+        
+
+Salvado
+/*QuickSaveWriter information = QuickSaveWriter.Create("Equipament");
+
+        information.Write("Character","NombrePersonaje");
+        information.Write("WeaponPrimary","ArmaPrimaria");
+        information.Write("WeaponSecondary","ArmaSecundaria");
+
+        information.Commit();*/
+
+
+Cargado
+
+//variable lecto leera el archivo equipamento
+        var lector = QuickSaveReader.Create("Equipament");
+
+        // en el string se guardara la variable de lector el nombre del personaje
+        nameCharacter = lector.Read<string>("Character");
+
+
+ref objeto y gameobjeto
+https://discussions.unity.com/t/object-vs-gameobject/105143

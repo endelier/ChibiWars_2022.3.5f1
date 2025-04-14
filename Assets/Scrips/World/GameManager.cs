@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using CI.QuickSave;
+using UnityEditor;
+using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,12 +20,32 @@ public class GameManager : MonoBehaviour
     //Municion
     public int gunAmmo;
 
+    //Instancias
+
+    public Transform starposition;
+    private string nameCharacter;
+    private Object characterObject;//object hace referencia a cualquier objeto de los assets pero no de la escena
+    
     //Estadisticas jugador
     public int healt;
 
     private void Awake()
     {
         Instance = this;
+
+        //variable lecto leera el archivo equipamento
+        var lector = QuickSaveReader.Create("Equipament");
+
+        // en el string se guardara la variable de lector el nombre del personaje
+        nameCharacter = lector.Read<string>("Character");
+
+        //se buscara al
+        characterObject = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Character/"+nameCharacter, typeof(Object)) as GameObject;
+
+        Object characterInstatiate = Instantiate (characterObject, starposition.position,Quaternion.identity);
+        characterInstatiate.GetComponent<PlayerAim>().enabled = true;
+        characterInstatiate.GetComponent<PlayerWeaponSwich>().enabled = true;
+        characterInstatiate.GetComponent<PlayerStatistics>().enabled = true;
 
     }
     void Start()
@@ -57,7 +80,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         //convierte la informacion de int a string y las envia al canvas
-        ammonText.text = gunAmmo.ToString();
+        /*ammonText.text = gunAmmo.ToString();*/
         healtText.text = healt.ToString();
 
         SaveHealt();

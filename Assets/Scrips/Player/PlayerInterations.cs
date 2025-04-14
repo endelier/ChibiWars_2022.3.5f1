@@ -9,16 +9,36 @@ public class PlayerInterations : MonoBehaviour
     //Este scrip es el que se cominica con el GameManager, envia y recibe informacion
     public Transform starPosition;
 
+    public GameObject weaponPrimary;
+    public GameObject weaponSecondary;
+
+    public int damage;
+
+    void Start()
+    {
+        weaponPrimary = GameObject.FindGameObjectWithTag("PrimaryWeapon");
+        weaponSecondary = GameObject.FindGameObjectWithTag("SecondaryWeapon");
+    }
+
     void OnTriggerEnter(Collider other)
     {
         
         //compara que el objeto con el que coliciono tenga el tag de municion
-        if(other.gameObject.CompareTag("GunAmmo")){
+        /*if(other.gameObject.CompareTag("GunAmmo")){
             
             //le da a la variable del gamemanager y le da mas municion
             GameManager.Instance.gunAmmo += other.GetComponent<AmmoBox>().ammo;
 
             //destruye la caja de municion
+            Destroy(other.gameObject);
+        }*/
+
+        if(other.gameObject.CompareTag("PrimaryAmmon")){
+            weaponPrimary.GetComponent<Weapon>().cargadorRecerva += other.GetComponent<AmmoBox>().ammo;
+            Destroy(other.gameObject);
+        }
+        if(other.gameObject.CompareTag("SecondaryAmmon")){
+            weaponSecondary.GetComponent<Weapon>().cargadorRecerva += other.GetComponent<AmmoBox>().ammo;
             Destroy(other.gameObject);
         }
 
@@ -26,7 +46,7 @@ public class PlayerInterations : MonoBehaviour
         //Si entra en la zona de muerte, pierde vida o respawnea
         if(other.gameObject.CompareTag("DeathZone")){
 
-            GameManager.Instance.LoseHealth(200);
+            //GameManager.Instance.LoseHealth(200);
             GetComponent<CharacterController>().enabled=false;
             this.gameObject.transform.position = starPosition.position;
             GetComponent<CharacterController>().enabled=true;
@@ -38,7 +58,8 @@ public class PlayerInterations : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.CompareTag("EnemyBullet")){
-            GameManager.Instance.LoseHealth(25);
+            damage = collision.gameObject.GetComponent<EnemyBullet>().damageBullet;
+            GameManager.Instance.LoseHealth(damage);
         }
     }
 }

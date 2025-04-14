@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -47,8 +48,13 @@ public class PlayerMove : MonoBehaviour
     private Animator animator;//Animator de personaje-se referencia en el estar
     bool isGrounded;
 
+    void Awake()
+    {
+        cam = FindObjectOfType<UniversalAdditionalCameraData>().transform;        
+    }
 
     void Start(){
+
         characterController = GetComponent<CharacterController>();//se referencia el controlador
         animator = GetComponent<Animator>();//Se refencia el animator
     }
@@ -94,7 +100,9 @@ public class PlayerMove : MonoBehaviour
         characterController.transform.rotation = Quaternion.LookRotation(Vector3.RotateTowards(characterController.transform.forward, direction, rotationSpeed, 0f));//rotando al jugador
 
         //para sistema de apuntado cambiar el direction en rotar por playerForeward
-        CharacterRun();
+        if(isGrounded){
+                    CharacterRun();
+        }
         characterController.Move(direction * Time.deltaTime * sprintSpeed);//moviendo al jugador
 
     }

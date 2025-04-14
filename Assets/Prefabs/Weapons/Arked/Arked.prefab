@@ -1952,10 +1952,9 @@ GameObject:
   - component: {fileID: 3770270868522780572}
   - component: {fileID: 658703830846125349}
   - component: {fileID: 1086815790337842017}
-  - component: {fileID: 8393526147491632058}
   m_Layer: 0
   m_Name: Arked
-  m_TagString: Primary Weapon
+  m_TagString: PrimaryWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2129,7 +2128,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9022451124327417673}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1f6c41cc39a815478f9f06d3457bf66, type: 3}
   m_Name: 
@@ -2143,20 +2142,6 @@ MonoBehaviour:
   bulletSpeed: 500
   aim: {fileID: 0}
   municion: 20
---- !u!114 &8393526147491632058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9022451124327417673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eca7a4e30acf2484aaf5795928dd4d45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weapon: {fileID: 9022451124327417673}
-  hand: {fileID: 0}
 --- !u!1 &9076678362735457350
 GameObject:
   m_ObjectHideFlags: 0

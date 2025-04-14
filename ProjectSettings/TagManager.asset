@@ -7,11 +7,14 @@ TagManager:
   - Enemy
   - Bullet
   - Building
-  - GunAmmo
   - DeathZone
   - EnemyBullet
-  - Primary Weapon
-  - Secondary Weapon
+  - AimSphere
+  - PuntoInicial
+  - PrimaryAmmon
+  - SecondaryAmmon
+  - PrimaryWeapon
+  - SecondaryWeapon
   layers:
   - Default
   - TransparentFX

@@ -13,6 +13,7 @@ public class PlayerCamera : MonoBehaviour
 
     private void Start()
     {
+        objectFollow = FindObjectOfType<PlayerMove>().transform;
         Cursor.lockState = CursorLockMode.Locked;//el cursor se queda enmedio de la pantalla
     }
 
