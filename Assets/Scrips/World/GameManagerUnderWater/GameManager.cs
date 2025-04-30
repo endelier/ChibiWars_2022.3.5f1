@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     //variable del propio game manager
     public static GameManager Instance{get;private set;}
 
-    //variable del canvas texs
+    [Header("Canvas")]//variable del canvas texs
     public Text ammonText;
     public Text healtText;
     public Slider healBar;
@@ -20,14 +20,14 @@ public class GameManager : MonoBehaviour
     //Municion
     public int gunAmmo;
 
-    //Instancias
-
+    [Header("Objectos")]//Instancias
     public Transform starposition;
     private string nameCharacter;
     private Object characterObject;//object hace referencia a cualquier objeto de los assets pero no de la escena
     
     //Estadisticas jugador
     public int healt;
+    public int level;
 
     private void Awake()
     {
@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
 
         Object characterInstatiate = Instantiate (characterObject, starposition.position,Quaternion.identity);
         characterInstatiate.GetComponent<PlayerAim>().enabled = true;
-        characterInstatiate.GetComponent<PlayerWeaponSwich>().enabled = true;
+        characterInstatiate.GetComponent<PlayerWeaponSwich>().enableswich = true;
         characterInstatiate.GetComponent<PlayerStatistics>().enabled = true;
 
     }

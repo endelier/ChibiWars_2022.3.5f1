@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class PlayerWeaponSwich : MonoBehaviour
 {
+    [Header("Enable Swich")]
+    public bool enableswich = true;
+
     [Header("Array Weapons")]
     public GameObject[] weapons = new GameObject[2];//Matriz de las armas
 
@@ -16,7 +19,6 @@ public class PlayerWeaponSwich : MonoBehaviour
     [Header("Bones")]
     public Transform hand;//hueso de la mano
     public Transform back;//hueso de la espalda
-
 
 
     void Start()
@@ -42,18 +44,20 @@ public class PlayerWeaponSwich : MonoBehaviour
 
     void Update()
     {
-        int previuseapon = selectedWeapon;
+        if(enableswich){
+            int previuseapon = selectedWeapon;
 
-        if(Input.GetKeyUp(KeyCode.F)){
-            if(selectedWeapon >= weapons.Length-1){
-                selectedWeapon = 0;
+            if(Input.GetKeyUp(KeyCode.F)){
+                if(selectedWeapon >= weapons.Length-1){
+                    selectedWeapon = 0;
+                }
+                else{
+                    selectedWeapon++;
+                }
             }
-            else{
-                selectedWeapon++;
+            if(previuseapon != selectedWeapon){
+                SelecWeapon();
             }
-        }
-        if(previuseapon != selectedWeapon){
-            SelecWeapon();
         }
     }
 
