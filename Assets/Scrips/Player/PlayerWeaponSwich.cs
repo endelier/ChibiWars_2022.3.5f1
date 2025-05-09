@@ -32,13 +32,11 @@ public class PlayerWeaponSwich : MonoBehaviour
         weapons[0].transform.SetParent(hand);
         weapons[0].transform.position = hand.position;
         weapons[0].transform.rotation = hand.transform.rotation;
-        weapons[0].GetComponent<Weapon>().enabled =true;
 
         weapons[1] = weaponSecondary;
         weapons[1].transform.SetParent(back);
         weapons[1].transform.position = back.position;
         weapons[1].transform.rotation = back.transform.rotation;
-        weapons[1].GetComponent<Weapon>().enabled =false;
         
     }
 

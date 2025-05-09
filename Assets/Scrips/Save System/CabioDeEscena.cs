@@ -11,9 +11,9 @@ public class CabioDeEscena : MonoBehaviour
 
     void Start()
     {
-        jugador = GameObject.FindGameObjectWithTag("Player");
+        /*jugador = GameObject.FindGameObjectWithTag("Player");
         puntoinicial = GameObject.FindGameObjectWithTag("PuntoInicial").transform;
-        MoverAPuntoInicial();
+        MoverAPuntoInicial();*/
     }
 
     void Update()
@@ -21,9 +21,9 @@ public class CabioDeEscena : MonoBehaviour
         ProbarCambioDeEscena();   
     }
 
-    public void MoverAPuntoInicial(){
+    /*public void MoverAPuntoInicial(){
         jugador.transform.position = puntoinicial.position;
-    }
+    }*/
 
     public void ProbarCambioDeEscena(){
 

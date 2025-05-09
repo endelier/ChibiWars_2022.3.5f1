@@ -22,7 +22,6 @@ public class MenuSystemEquipament : MonoBehaviour
         readingbool = saveLobby.leyendo;//sacando el leyendo del save para abrir el menu
 
         MenuSystem();
-        Debug.Log(level);
 
     }
 

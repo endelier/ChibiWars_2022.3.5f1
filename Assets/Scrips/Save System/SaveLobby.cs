@@ -53,6 +53,7 @@ public class SaveLobby : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other);
         if(other.gameObject.CompareTag("Player")){
             zone = true;
         }
