@@ -23,7 +23,6 @@ public class PlayerWeaponSwich : MonoBehaviour
 
     void Start()
     {
-
         weaponPrimary = GameObject.FindGameObjectWithTag("PrimaryWeapon");
         weaponSecondary = GameObject.FindGameObjectWithTag("SecondaryWeapon");
 
@@ -37,15 +36,15 @@ public class PlayerWeaponSwich : MonoBehaviour
         weapons[1].transform.SetParent(back);
         weapons[1].transform.position = back.position;
         weapons[1].transform.rotation = back.transform.rotation;
-        
     }
 
-    void Update()
+    //se actualiza despues del actualizar normal
+    void LateUpdate()
     {
+        int previuseapon = selectedWeapon;
         if(enableswich){
-            int previuseapon = selectedWeapon;
-
             if(Input.GetKeyUp(KeyCode.F)){
+                
                 if(selectedWeapon >= weapons.Length-1){
                     selectedWeapon = 0;
                 }
@@ -53,18 +52,14 @@ public class PlayerWeaponSwich : MonoBehaviour
                     selectedWeapon++;
                 }
             }
-            if(previuseapon != selectedWeapon){
-                SelecWeapon();
-            }
+            PositionWeapon(previuseapon);
         }
     }
 
-    private void SelecWeapon(){
-
+    private void PositionWeapon(int previuseapon){
         int i = 0;
-
         foreach(GameObject weapon in weapons){
-            if(i == selectedWeapon){
+            if(i == previuseapon){
                 weapon.transform.SetParent(hand);
                 weapon.transform.position = hand.position;
                 weapon.transform.rotation = hand.transform.rotation;

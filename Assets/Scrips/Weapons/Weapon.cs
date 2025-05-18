@@ -9,9 +9,6 @@ public class Weapon : MonoBehaviour
     public float fireRate = 1f;//velocidad de cada disparo
     public float fireRateTimer = 4f;//cronometro para disparar
 
-    [Header("Charge")]
-    //public int bulletCharge = 20;//cargador
-
     [Header("MultiShot")]
     public int multiShot = 1;//multidisparo
 
@@ -27,12 +24,18 @@ public class Weapon : MonoBehaviour
     public float bulletSpeed = 500f;//velocidad de la bala
     public PlayerAim aim;//componente PlayerAim del player
 
-    public int cargadorEnArma = 20;
-    public int cargadorRecerva=20;
 
-    [HideInInspector]public int maxBalasEnArma = 20;
-    [HideInInspector]public int maxCargadorRecerva=20;
+    [Header("Bullets")]
+    public int bulletInGun=20;
+    public int ammonInGun=20;
 
+    [HideInInspector]public int maxBulletInGun = 20;
+    [HideInInspector]public int maxAmmonReserve=20;
+
+    [Header("Array Bullet")]
+    public GameObject[] bullets;
+
+    [Header("Active")]
     public bool activo;
 
 
@@ -48,8 +51,8 @@ public class Weapon : MonoBehaviour
         audioSource = GetComponent<AudioSource>();//se referencia que el audiosource es de la misma arma
         //GameManager.Instance.gunAmmo = municion;
         
-        municionCurrent.GetComponent<Text>().text = cargadorEnArma.ToString();
-        municionMax.GetComponent<Text>().text = cargadorRecerva.ToString();
+        municionCurrent.GetComponent<Text>().text = bulletInGun.ToString();
+        municionMax.GetComponent<Text>().text = ammonInGun.ToString();
     }
 
     void Update()
@@ -59,13 +62,14 @@ public class Weapon : MonoBehaviour
         }
         SpeedOfEachShot();
         Fire();
+        ReloadAmmon();
         WaponAnimation();
     }
 
     private void DrawAmmo(){
 
-        municionCurrent.GetComponent<Text>().text = cargadorEnArma.ToString();
-        municionMax.GetComponent<Text>().text = cargadorRecerva.ToString();
+        municionCurrent.GetComponent<Text>().text = bulletInGun.ToString();
+        municionMax.GetComponent<Text>().text = ammonInGun.ToString();
 
     }
     //Cronometro de cada cuanto se puede disparar
@@ -86,7 +90,7 @@ public class Weapon : MonoBehaviour
         
         barrelPos.LookAt(aim.aimpos);//el barril mira hacia donde esta el puntero
 
-        if(Input.GetMouseButton(0) && fireRateTimer > fireRate && /*GameManager.Instance.gunAmmo*/ cargadorEnArma > 0 && Time.timeScale != 0){
+        if(Input.GetMouseButton(0) && fireRateTimer > fireRate && /*GameManager.Instance.gunAmmo*/ bulletInGun > 0 && Time.timeScale != 0){
                 
             fireRateTimer = 0;//reinica el cronometro
 
@@ -108,17 +112,26 @@ public class Weapon : MonoBehaviour
             }
             
             //le resta una bala a la municion;
-            //GameManager.Instance.gunAmmo--;
-            cargadorEnArma--;
+            bulletInGun--;
         }
 
+    }
+
+    private void ReloadAmmon(){
+
+        if(bulletInGun == 0){
+            if(Input.GetKeyUp(KeyCode.R)){
+                bulletInGun+=ammonInGun;
+                ammonInGun-=maxAmmonReserve;
+            }
+        }
     }
 
 //Seccion de animacion
     void WaponAnimation(){
 
         //si no tiene balas se abre el arma
-        if(GameManager.Instance.gunAmmo <= 0){
+        if(bulletInGun <= 0){
             weaponAnimator.Play("OpenShell");
         }
         //Si tiene balas se cierra

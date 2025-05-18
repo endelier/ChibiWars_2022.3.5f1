@@ -6,10 +6,18 @@ public class Bullets : MonoBehaviour
 {
     // Start is called before the first frame update
 
+    public int damageBullet=25;
+
+    public bool destroyBullet=false;
+
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Building")){
-            //Destroy(gameObject);
+        if(destroyBullet==true &&collision.gameObject.CompareTag("Building")){
+            Destroy(gameObject);
+        }
+
+        if(collision.gameObject.CompareTag("Player")){
+            Destroy(gameObject);
         }
     }
 }

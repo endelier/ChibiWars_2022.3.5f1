@@ -3052,7 +3052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d40076e397ad4e44a121701a12f4e13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombre: EvilRhan.prefab
+  nombre: EvilRhan
   characterStadistics: EvilRhanStadistics
 --- !u!114 &1372160816582901480
 MonoBehaviour:
@@ -3130,6 +3130,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   starPosition: {fileID: 0}
+  weaponPrimary: {fileID: 0}
+  weaponSecondary: {fileID: 0}
   damage: 0
 --- !u!114 &7446160012850494945
 MonoBehaviour:
@@ -3143,6 +3145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a5178aca9f49484695d25a232f0e1fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enableswich: 1
   weapons:
   - {fileID: 0}
   - {fileID: 0}

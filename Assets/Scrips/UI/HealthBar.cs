@@ -16,9 +16,9 @@ public class HealthBar : MonoBehaviour
     void Start()
     {
         //healthbar.maxValue=maxHealth;
-        currentHealth = GameManager.Instance.healt;
+        currentHealth = GameManager.Instance.healtPlayer;
         Debug.Log(currentHealth);
-        Debug.Log(GameManager.Instance.healt);
+        Debug.Log(GameManager.Instance.healtPlayer);
     }
 
     void Update()

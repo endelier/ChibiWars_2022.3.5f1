@@ -2141,7 +2141,17 @@ MonoBehaviour:
   barrelPos: {fileID: 4477420112188713981}
   bulletSpeed: 500
   aim: {fileID: 0}
-  municion: 20
+  bulletInGun: 20
+  ammonInGun: 20
+  maxBulletInGun: 20
+  maxAmmonReserve: 20
+  bullets:
+  - {fileID: 7422535288151380513, guid: e8f0741a9034d0b4a964d095f721d24b, type: 3}
+  - {fileID: 7422535288151380513, guid: e8f0741a9034d0b4a964d095f721d24b, type: 3}
+  - {fileID: 7422535288151380513, guid: e8f0741a9034d0b4a964d095f721d24b, type: 3}
+  - {fileID: 7422535288151380513, guid: e8f0741a9034d0b4a964d095f721d24b, type: 3}
+  - {fileID: 7422535288151380513, guid: e8f0741a9034d0b4a964d095f721d24b, type: 3}
+  activo: 0
 --- !u!1 &9076678362735457350
 GameObject:
   m_ObjectHideFlags: 0

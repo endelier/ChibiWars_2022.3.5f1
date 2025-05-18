@@ -1541,7 +1541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d40076e397ad4e44a121701a12f4e13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombre: Rhan.prefab
+  nombre: Rhan
   characterStadistics: RhanStadistics
 --- !u!114 &2438124588685467683
 MonoBehaviour:
@@ -1556,7 +1556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healt: 200
-  armor: 0
+  armor: 0.5
   sheld: 0
 --- !u!114 &1465030738282735099
 MonoBehaviour:

@@ -19,9 +19,7 @@ public class GameManager : MonoBehaviour
     public Text ammonText;
     public Text healtText;
     public Slider healBar;
-
-    //Municion
-    public int gunAmmo;
+    public Text missionObjetiveText;
 
     [Header("Objectos")]//Instancias
     public Transform starposition;
@@ -31,9 +29,20 @@ public class GameManager : MonoBehaviour
     private Object characterObject;//object hace referencia a cualquier objeto de los assets pero no de la escena
     private Object primaryWeapon;
     private Object secondaryWeapon;
-    
+
+    [Header("Estadisticas del Jugador")]
     //Estadisticas jugador
-    public int healt;
+    public float healtPlayer;
+    public float armorPlayer;
+
+    public int healtPlayerUI;
+
+
+    [Header("Mision")]
+    public float objectiveLife;
+    public float objectiveArmor;
+
+    public int objectiveLifeUI;
 
     private void Awake()
     {
@@ -58,7 +67,8 @@ public class GameManager : MonoBehaviour
         Object weaponSeco = Instantiate (secondaryWeapon, starposition.position,Quaternion.identity);
 
         //Activa o desactiva componentes segun el tipo de nivel que sea: 0-neutral, 1-ataque
-        if(level == 0){
+        if (level == 0)
+        {
 
             characterInstatiate.GetComponent<PlayerAim>().enabled = false;
             characterInstatiate.GetComponent<PlayerWeaponSwich>().enableswich = false;
@@ -68,14 +78,20 @@ public class GameManager : MonoBehaviour
             weaponSeco.GetComponent<Weapon>().enabled = false;
 
         }
-        if(level == 1){
-
+        if (level == 1)
+        {
             characterInstatiate.GetComponent<PlayerAim>().enabled = true;
             characterInstatiate.GetComponent<PlayerWeaponSwich>().enableswich = true;
             characterInstatiate.GetComponent<PlayerStatistics>().enabled = true;
 
             weaponPri.GetComponent<Weapon>().enabled = true;
             weaponSeco.GetComponent<Weapon>().enabled = false;
+            
+            //pasa la informacion de las estadisticas del jugador al UI
+            healtPlayer = characterInstatiate.GetComponent<PlayerStatistics>().healt;
+            healBar.maxValue = healtPlayer;
+            healBar.value = healtPlayer;
+            healtText.text = healtPlayer.ToString();
         }
 
     }
@@ -84,65 +100,55 @@ public class GameManager : MonoBehaviour
         if(level == 0)
         {
         }
-        if(level == 1){
-
-            //Llama la vida y se lo envia al slider
-            healBar.maxValue=healt;
-            healBar.value=healt;
-
-            /*Inicia la corrutina para enviarlos datos,  porque los starts inicial al mismo tiempo y los valores
-            se pasa a 0*/
-            StartCoroutine("ValuesData");
-
-            //Si la vida maxima es mayor a 0 detiene la corrutina
-            if(healBar.maxValue > 0){
-                StopCoroutine("ValuesData");
-            }
+        if (level == 1)
+        {
+            //le envia la vida al text del objetivo
+            missionObjetiveText.text = objectiveLife.ToString();
         }
-
-    }
-
-    IEnumerator ValuesData(){
-
-        //Se detiene la corrutina por 0.1
-        yield return new WaitForSeconds(0.1f);
-
-        //El slider recive la informacion
-        healBar.maxValue = healt;
-        healBar.value = healt;
 
     }
 
     void Update()
     {
-        if(level==1){
-            //convierte la informacion de int a string y las envia al canvas
-            /*ammonText.text = gunAmmo.ToString();*/
-            healtText.text = healt.ToString();
-
+        if (level == 1)
+        {
             SaveHealt();
-            DrawHealt();
         }
     }
 
-    //Funcion para perder vida
-    public void LoseHealth(int healtToReduce){
-
-        healt -= healtToReduce;
-        healBar.value=healt;
+    public void HealtPlayer(int bulletdamage)
+    {
+        //vida = bala x armadura
+        healtPlayer -= bulletdamage * armorPlayer;
+        //de float se convierte en int
+        healtPlayerUI = (int)healtPlayer;
+        healBar.value = healtPlayer;
+        if (healtPlayerUI < 0)
+        {
+            healtPlayerUI = 0;
+        }
+        //convierte la informacion de int a string y las envia al canvas
+        healtText.text = healtPlayerUI.ToString();
     }
 
     //Si la vida es 0, se reinicia el nivel
-    public void SaveHealt(){
-        if(healt<=0){
+    public void SaveHealt()
+    {
+        if (healtPlayer <= 0)
+        {
             Debug.Log("Has muerto");
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
-    //Dibuja en el slider;
-    public void DrawHealt(){
-        healBar.value=healt;
+    //se Recive la informacion del daño de la bala y se le reduce a la vida del objetivo
+    public void LifeObjective(int bulletDamage)
+    {
+        //vida del objetivo -= bala x armadura
+        objectiveLife -= bulletDamage * objectiveArmor;
+        //de float se convierte en int
+        objectiveLifeUI = (int)objectiveLife;
+        //convierte la informacion de int a string y las envia al canvas
+        missionObjetiveText.text = objectiveLifeUI.ToString();
     }
-
 }
