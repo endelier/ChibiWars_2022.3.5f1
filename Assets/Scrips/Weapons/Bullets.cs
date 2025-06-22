@@ -4,20 +4,36 @@ using UnityEngine;
 
 public class Bullets : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public int damageBullet = 25;
 
-    public int damageBullet=25;
-
-    public bool destroyBullet=false;
+    //Cuando se activa la bala
+    private void OnEnable()
+    {
+        // Invoka la funcion para que se desactive en 20 segundos
+        Invoke(nameof(DisableBullet), 20f);
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(destroyBullet==true &&collision.gameObject.CompareTag("Building")){
-            Destroy(gameObject);
+        // Aquí puedes poner lógica de daño al enemigo, partículas, etc.
+        
+        //Cuando choca con el enemigo 
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            DisableBullet();
         }
+    }
 
-        if(collision.gameObject.CompareTag("Player")){
-            Destroy(gameObject);
-        }
+    //Funcion de desactivar la bala para que vuelva al pool llamada desde el Invoke por si no choco con nada
+    private void DisableBullet()
+    {
+        gameObject.SetActive(false);
+    }
+
+    //funcion que se activa cuando SetActive(false);
+    private void OnDisable()
+    {
+        // Cancela el Invoke por si la bala se desactiva antes (por colisión)
+        CancelInvoke();
     }
 }

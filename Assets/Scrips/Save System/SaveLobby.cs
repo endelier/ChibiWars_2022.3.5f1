@@ -14,11 +14,13 @@ public class SaveLobby : MonoBehaviour
     [Header("Player Things")]
     public Transform equipamentZone;//zona del arcenal y donde mira la camara
     public Transform equipamentPosition;//punto se repociciona y creal al personaje
-    public Transform follorPlayer;
+    public Transform followPlayer;
     public GameObject characterPlayer;
 
     [Header("MenuSystem")]
     public MenuSystemEquipament menuSysEqui;//se llama al UI del arcenal
+
+    public int menuNun;
 
     //otros
     private bool zone = false;
@@ -29,22 +31,24 @@ public class SaveLobby : MonoBehaviour
 
     void Start()
     {
-        follorPlayer = FindObjectOfType<PlayerCamera>().transform;
+        followPlayer = FindObjectOfType<PlayerCamera>().transform;
         characterPlayer = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void Update()
     {
+        menuNun = menuSysEqui.level;
 
         //posicion en 0 -550, posicion en 150 -250
         //si esta en la zona y aplasta c leera las estadisticas del personaje
-        if(zone && Input.GetKeyUp(KeyCode.X)){
+        if (zone && Input.GetKeyUp(KeyCode.X))
+        {
             //Lectura();
             ReposicionActivdo();
             leyendo = true;
             characterName = characterPlayer.GetComponent<AutoReference>().nombre;
         }
-        if(zone && Input.GetKeyUp(KeyCode.Escape)){
+        if(zone && Input.GetKeyUp(KeyCode.Escape) && menuNun==0){
             Escritura();
             ReposicionDesactivado();
             leyendo = false;
@@ -53,7 +57,7 @@ public class SaveLobby : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other);
+        //Debug.Log(other);
         if(other.gameObject.CompareTag("Player")){
             zone = true;
         }
@@ -90,7 +94,7 @@ public class SaveLobby : MonoBehaviour
 
     private void ReposicionDesactivado(){
         //camara vuelve a mirar el centro del personjae
-        cameraVirtual.m_Follow = follorPlayer;
+        cameraVirtual.m_Follow = followPlayer;
         //busca al nuevo personaje jugable
         characterPlayer = GameObject.FindGameObjectWithTag("Player");
         //regresa la pocicion original del homnbro

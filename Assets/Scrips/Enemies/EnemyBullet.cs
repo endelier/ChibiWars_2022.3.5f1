@@ -4,20 +4,29 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {
-    //Solo pasa a destruirse la bala en un cierto tiempo o si choca con el jugador
+    public float speed = 20f;
+    public float lifeTime = 20f;
+    public int damageBullet = 10;//<<<<<<<<<<<<<<<<<<<<<<<<<<<-
 
-    public int damageBullet=25;
-
-    void Start()
+    //cuando se activa la bala
+    private void OnEnable()
     {
-        Destroy(gameObject, 3);
+        // Invoka la funcion para que se desactive en 20 segundos
+        Invoke(nameof(DeactivateBullet), lifeTime);
     }
 
-
-    private void OnCollisionEnter(Collision collision)
+    //Desactiva la bala mandandola a al Queue y la funcion ReturnBullet es la que la desactiva
+    private void DeactivateBullet()
     {
-        if(collision.gameObject.CompareTag("Player")){
-            Destroy(gameObject);
+        EnemyBulletPool.Instance.ReturnBullet(this.gameObject);
+    }
+
+    //si toca al jugador desactiva la bala
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            DeactivateBullet();
         }
     }
 }

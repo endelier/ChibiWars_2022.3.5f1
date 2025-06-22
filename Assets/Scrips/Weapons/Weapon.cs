@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Weapon : MonoBehaviour
 {
     [Header("Shot Speed")]
-    public float fireRate = 1f;//velocidad de cada disparo
+    public float fireRate = 1f;//Cadencia de fuego
     public float fireRateTimer = 4f;//cronometro para disparar
 
     [Header("MultiShot")]
@@ -32,8 +32,9 @@ public class Weapon : MonoBehaviour
     [HideInInspector]public int maxBulletInGun = 20;
     [HideInInspector]public int maxAmmonReserve=20;
 
-    [Header("Array Bullet")]
-    public GameObject[] bullets;
+    [Header("Pool Bullet")]
+    [SerializeField]private List<GameObject> bulletPool = new List<GameObject>();//lista de balas
+    private int poolSize = 50; // Tamaño de la lista de las balas
 
     [Header("Active")]
     public bool activo;
@@ -49,10 +50,19 @@ public class Weapon : MonoBehaviour
 
         weaponAnimator = GetComponent<Animator>();//se referencia que el animator es de la misma arma
         audioSource = GetComponent<AudioSource>();//se referencia que el audiosource es de la misma arma
-        //GameManager.Instance.gunAmmo = municion;
+
+        //For que instancia balas y las mete en la lista
+        for (int i = 0; i < poolSize; i++)
+        {
+            GameObject obj = Instantiate(bullet);
+            obj.SetActive(false);
+            bulletPool.Add(obj);
+        }
         
+        //Textos de la municion
         municionCurrent.GetComponent<Text>().text = bulletInGun.ToString();
         municionMax.GetComponent<Text>().text = ammonInGun.ToString();
+        
     }
 
     void Update()
@@ -66,7 +76,9 @@ public class Weapon : MonoBehaviour
         WaponAnimation();
     }
 
-    private void DrawAmmo(){
+    //Funcion para dibujar las balas en el arma y la municion
+    private void DrawAmmo()
+    {
 
         municionCurrent.GetComponent<Text>().text = bulletInGun.ToString();
         municionMax.GetComponent<Text>().text = ammonInGun.ToString();
@@ -86,48 +98,75 @@ public class Weapon : MonoBehaviour
     }
 
     //funcion que se ejecuta cuando el cronometro es mas alto y dispara
-    private void Fire(){
-        
-        barrelPos.LookAt(aim.aimpos);//el barril mira hacia donde esta el puntero
+    private void Fire() {
+        //el barril mira a la posicion del aim
+        barrelPos.LookAt(aim.aimpos);
 
-        if(Input.GetMouseButton(0) && fireRateTimer > fireRate && /*GameManager.Instance.gunAmmo*/ bulletInGun > 0 && Time.timeScale != 0){
-                
-            fireRateTimer = 0;//reinica el cronometro
-
+        //if para disparar, si click y cronometro es menor a cadencia y balas son mayores a cero y el tiempo no esta pausado
+        if (Input.GetMouseButton(0) && fireRateTimer > fireRate && bulletInGun > 0 && Time.timeScale != 0)
+        {
+            //reinicia el cronometro a 0
+            fireRateTimer = 0;
+            //reproduce el sonido de disparo
             audioSource.PlayOneShot(soundSource);
 
-            //Instancia en ciclo balas, oesa el multidisparo
-            for(int i =0; i<multiShot; i++){
-                
-                //crea la bala
-                GameObject newBullet = Instantiate(bullet,barrelPos.position, barrelPos.rotation);
-                
-                //busca el componente rigidbody
-                Rigidbody rb = newBullet.GetComponent<Rigidbody>();
+            //por cada multidisparo saca una bala de la lista de balas, 1 = 1 bala disparada 2 = 2 etc.
+            for (int i = 0; i < multiShot; i++)
+            {
+                //Llama la funcion tomar bala de la picina
+                GameObject newBullet = GetPooledBullet();
 
-                //se le da el impulso, dede el frente del barril X velocidad de la bala
-                rb.AddForce(barrelPos.forward * bulletSpeed, ForceMode.Impulse);
-
-                Destroy(newBullet, 5);
+                //si la bala no es nula
+                if (newBullet != null)
+                {
+                    //a la bala le da posicion y rotacion del barrir
+                    newBullet.transform.position = barrelPos.position;
+                    newBullet.transform.rotation = barrelPos.rotation;
+                    //activa la bala
+                    newBullet.SetActive(true);
+                    
+                    //iguala una variable Rigidbody para solo hacer una llamada
+                    Rigidbody rb = newBullet.GetComponent<Rigidbody>();
+                    rb.velocity = Vector3.zero; // reset para evitar arrastre de fuerza previa
+                    rb.angularVelocity = Vector3.zero;
+                    rb.AddForce(barrelPos.forward * bulletSpeed, ForceMode.Impulse);
+                }
             }
-            
-            //le resta una bala a la municion;
+
             bulletInGun--;
         }
-
     }
 
-    private void ReloadAmmon(){
-
-        if(bulletInGun == 0){
-            if(Input.GetKeyUp(KeyCode.R)){
-                bulletInGun+=ammonInGun;
-                ammonInGun-=maxAmmonReserve;
+    //Funcion para recargar arma
+    private void ReloadAmmon()
+    {
+        //Si balas en arma son igual a 0
+        if (bulletInGun == 0)
+        {
+            //Si aplasta la letra R
+            if (Input.GetKeyUp(KeyCode.R))
+            {
+                bulletInGun += ammonInGun;
+                ammonInGun -= maxAmmonReserve;
             }
         }
     }
 
-//Seccion de animacion
+    //Funcion para obtener una bala disponible del pool
+    private GameObject GetPooledBullet()
+    {
+        //por cada bala en bulletPool
+        foreach (GameObject bullet in bulletPool)
+        {
+            //si bullet no esta activo en la jerarquia
+            if (!bullet.activeInHierarchy)
+                //regresa bullet o da una bala
+                return bullet;
+        }
+        return null;
+    }
+
+    //Seccion de animacion
     void WaponAnimation(){
 
         //si no tiene balas se abre el arma

@@ -9,12 +9,16 @@ public class CambioDeEscena2 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
         if(other.gameObject.CompareTag("Player")){
-            if(SceneManager.GetActiveScene().buildIndex == 0){
+            
+            //Si esta en lobby carga nivel debajo del agua
+            if (SceneManager.GetActiveScene().buildIndex == 0)
+            {
                 SceneManager.LoadScene(1);
             }
-            else{
+            //sino carga el lobby
+            else
+            {
                 SceneManager.LoadScene(0);
             }   
         }

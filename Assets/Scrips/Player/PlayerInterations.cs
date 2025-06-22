@@ -57,7 +57,7 @@ public class PlayerInterations : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("EnemyBullet")){
             bulletDamage = collision.gameObject.GetComponent<EnemyBullet>().damageBullet;
-            GameManager.Instance.HealtPlayer(bulletDamage);
+            GameManager.Instance.HealthPlayer(bulletDamage);
         }
     }
 }

@@ -14,7 +14,7 @@ public class PlayerWeaponSwich : MonoBehaviour
     private GameObject weaponPrimary;//arma primaria
     private GameObject weaponSecondary;//arma secundaria
 
-    private int selectedWeapon=0;//numero del arma seleccionada
+    private int selectedWeapon = 0;//numero del arma seleccionada
 
     [Header("Bones")]
     public Transform hand;//hueso de la mano
@@ -42,36 +42,52 @@ public class PlayerWeaponSwich : MonoBehaviour
     void LateUpdate()
     {
         int previuseapon = selectedWeapon;
-        if(enableswich){
-            if(Input.GetKeyUp(KeyCode.F)){
-                
-                if(selectedWeapon >= weapons.Length-1){
+
+        //Si esta habilitado el swich cambia el indice para las armas
+        if (enableswich)
+        {
+            if (Input.GetKeyUp(KeyCode.F))
+            {
+                if (selectedWeapon >= weapons.Length - 1)
+                {
                     selectedWeapon = 0;
                 }
-                else{
+                else
+                {
                     selectedWeapon++;
                 }
             }
-            PositionWeapon(previuseapon);
         }
+        PositionWeapon(previuseapon);
     }
 
-    private void PositionWeapon(int previuseapon){
+    //Mantiene la posicion de las armas
+    private void PositionWeapon(int previuseapon)
+    {
         int i = 0;
-        foreach(GameObject weapon in weapons){
-            if(i == previuseapon){
+        foreach (GameObject weapon in weapons)
+        {
+            if (i == previuseapon)
+            {
                 weapon.transform.SetParent(hand);
                 weapon.transform.position = hand.position;
                 weapon.transform.rotation = hand.transform.rotation;
-                weapon.GetComponent<Weapon>().activo = true;
-                weapon.GetComponent<Weapon>().enabled =true;
+
+                //Solo si esta activo el swich activa los componentes
+                if (enableswich)
+                {
+                    weapon.GetComponent<Weapon>().activo = true;
+                    weapon.GetComponent<Weapon>().enabled = true;
+                }
+
             }
-            else{
+            else
+            {
                 weapon.transform.SetParent(back);
                 weapon.transform.position = back.position;
                 weapon.transform.rotation = back.transform.rotation;
                 weapon.GetComponent<Weapon>().activo = false;
-                weapon.GetComponent<Weapon>().enabled =false;
+                weapon.GetComponent<Weapon>().enabled = false;
             }
             i++;
         }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -10,19 +8,23 @@ using Unity.VisualScripting;
 public class GameManager : MonoBehaviour
 {
     //variable del propio game manager
-    public static GameManager Instance{get;private set;}
+    public static GameManager Instance { get; private set; }
 
     [Header("Game level")]
     public int level;
 
+    [SerializeField]private GameManagerData GMS;
+
     [Header("Canvas")]//variable del canvas texs
     public Text ammonText;
-    public Text healtText;
-    public Slider healBar;
-    public Text missionObjetiveText;
+    public Text healthText;
+    public Slider healthBar;
+    //public Text missionObjetiveText;
 
     [Header("Objectos")]//Instancias
     public Transform starposition;
+
+    //Cosas del jugador y armas
     private string nameCharacter;
     private string namePrimary;
     private string nameSecondary;
@@ -32,21 +34,32 @@ public class GameManager : MonoBehaviour
 
     [Header("Estadisticas del Jugador")]
     //Estadisticas jugador
-    public float healtPlayer;
+    public float healthPlayer;
     public float armorPlayer;
-
-    public int healtPlayerUI;
+    public int healthPlayerUI;
 
 
     [Header("Mision")]
-    public float objectiveLife;
-    public float objectiveArmor;
+    public int missionWin = 0;// 0=null, 1=win,2=lose
 
-    public int objectiveLifeUI;
+    //otros
+    private float contador;//Contador vidas jugador
 
     private void Awake()
     {
+        // Asegurarse de que solo haya una instancia
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject); // Elimina duplicados
+        }
+
         Instance = this;
+
+        GMS.Level(level);
 
         //variable lecto leera el archivo equipamento
         var lector = QuickSaveReader.Create("Equipament");
@@ -57,14 +70,14 @@ public class GameManager : MonoBehaviour
         nameSecondary = lector.Read<string>("WeaponSecondary");
 
         //busca el objeto en la direccion dada del proyecto
-        characterObject = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Character/"+nameCharacter+".prefab", typeof(Object)) as GameObject;
-        primaryWeapon = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Weapons/"+namePrimary+"/"+namePrimary+".prefab", typeof(Object)) as GameObject;
-        secondaryWeapon = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Weapons/"+nameSecondary+"/"+nameSecondary+".prefab", typeof(Object)) as GameObject;
+        characterObject = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Character/" + nameCharacter + ".prefab", typeof(Object)) as GameObject;
+        primaryWeapon = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Weapons/" + namePrimary + "/" + namePrimary + ".prefab", typeof(Object)) as GameObject;
+        secondaryWeapon = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Weapons/" + nameSecondary + "/" + nameSecondary + ".prefab", typeof(Object)) as GameObject;
 
         //instancia los objetos
-        Object characterInstatiate = Instantiate (characterObject, starposition.position,Quaternion.identity);
-        Object weaponPri = Instantiate (primaryWeapon, starposition.position,Quaternion.identity);
-        Object weaponSeco = Instantiate (secondaryWeapon, starposition.position,Quaternion.identity);
+        Object characterInstatiate = Instantiate(characterObject, starposition.position, Quaternion.identity);
+        Object weaponPri = Instantiate(primaryWeapon, starposition.position, Quaternion.identity);
+        Object weaponSeco = Instantiate(secondaryWeapon, starposition.position, Quaternion.identity);
 
         //Activa o desactiva componentes segun el tipo de nivel que sea: 0-neutral, 1-ataque
         if (level == 0)
@@ -77,6 +90,10 @@ public class GameManager : MonoBehaviour
             weaponPri.GetComponent<Weapon>().enabled = false;
             weaponSeco.GetComponent<Weapon>().enabled = false;
 
+            //se pasa los objectos :D
+            /*Cosa(characterInstatiate);
+            Cosa(weaponPri);*/
+
         }
         if (level == 1)
         {
@@ -86,69 +103,87 @@ public class GameManager : MonoBehaviour
 
             weaponPri.GetComponent<Weapon>().enabled = true;
             weaponSeco.GetComponent<Weapon>().enabled = false;
-            
+
             //pasa la informacion de las estadisticas del jugador al UI
-            healtPlayer = characterInstatiate.GetComponent<PlayerStatistics>().healt;
-            healBar.maxValue = healtPlayer;
-            healBar.value = healtPlayer;
-            healtText.text = healtPlayer.ToString();
+            healthPlayer = characterInstatiate.GetComponent<PlayerStatistics>().healt;
+            healthBar.maxValue = healthPlayer;
+            healthBar.value = healthPlayer;
+            healthText.text = healthPlayer.ToString();
         }
 
     }
+
     void Start()
     {
-        if(level == 0)
-        {
-        }
-        if (level == 1)
-        {
-            //le envia la vida al text del objetivo
-            missionObjetiveText.text = objectiveLife.ToString();
-        }
-
     }
 
     void Update()
     {
         if (level == 1)
         {
-            SaveHealt();
+            SaveHealth();
+            Perder();
+
+            //Debug.Log(contador);
         }
     }
 
-    public void HealtPlayer(int bulletdamage)
+    //--------------------------------------------------Player Functions---------------------------
+    public void HealthPlayer(int bulletdamage)
     {
         //vida = bala x armadura
-        healtPlayer -= bulletdamage * armorPlayer;
+        healthPlayer -= bulletdamage * armorPlayer;
         //de float se convierte en int
-        healtPlayerUI = (int)healtPlayer;
-        healBar.value = healtPlayer;
-        if (healtPlayerUI < 0)
+        healthPlayerUI = (int)healthPlayer;
+        //healBar.value = healtPlayer;
+        healthBar.value = healthPlayer;
+        if (healthPlayerUI < 0)
         {
-            healtPlayerUI = 0;
+            healthPlayerUI = 0;
         }
         //convierte la informacion de int a string y las envia al canvas
-        healtText.text = healtPlayerUI.ToString();
+        healthText.text = healthPlayerUI.ToString();
     }
 
     //Si la vida es 0, se reinicia el nivel
-    public void SaveHealt()
+    public void SaveHealth()
     {
-        if (healtPlayer <= 0)
+        if (healthPlayer <= 0)
         {
             Debug.Log("Has muerto");
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
-    //se Recive la informacion del daño de la bala y se le reduce a la vida del objetivo
-    public void LifeObjective(int bulletDamage)
+    //--------------------------------------------------Missions Functions---------------------------
+    //Defensa
+    /*//se Recive la informacion del daño de la bala y se le reduce a la vida del objetivo
+            public void HealthObjective(int bulletDamage)
     {
         //vida del objetivo -= bala x armadura
         objectiveLife -= bulletDamage * objectiveArmor;
         //de float se convierte en int
         objectiveLifeUI = (int)objectiveLife;
         //convierte la informacion de int a string y las envia al canvas
-        missionObjetiveText.text = objectiveLifeUI.ToString();
+        //missionObjetiveText.text = objectiveLifeUI.ToString();
+    }*/
+
+    private void Perder()
+    {
+        if (missionWin == 2)
+        {
+            Debug.Log("Has perdido");
+            Tiempo();
+            if (contador >= 10)
+            {
+                SceneManager.LoadScene(0);
+            }
+
+        }
+    }
+
+    void Tiempo()
+    {
+        contador = contador + 1 * Time.deltaTime;
     }
 }

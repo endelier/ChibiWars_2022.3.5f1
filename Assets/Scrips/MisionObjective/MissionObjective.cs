@@ -7,25 +7,40 @@ public class MissionObjective : MonoBehaviour
 {
 
     [Header("Stadistics")]
-    public int objectiveLife;
+    public float objectiveLife;
     [Range(1.0f, 0.1f)]
     public float objectiveArmor;
+    public int objectiveLifeUI;
+
+    public Text missionObjetiveText;
 
     [HideInInspector] public int bulletDamage;
 
     void Start()
     {
-        //le dice que el game manager su valor es igual al valor de las estadisticas
-        GameManager.Instance.objectiveLife = objectiveLife;
-        GameManager.Instance.objectiveArmor = objectiveArmor;
+
+        //le envia la vida al text del objetivo
+        missionObjetiveText = FindAnyObjectByType<ObjectiveMission>().text;
+        missionObjetiveText.text = objectiveLife.ToString();
     }
 
+    //Colicion de la bala con el objetivo
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
             bulletDamage = collision.gameObject.GetComponent<Bullets>().damageBullet;
-            GameManager.Instance.LifeObjective(bulletDamage);
+            HealthObjective(bulletDamage);
         }
+    }
+
+        public void HealthObjective(int bulletDamage)
+    {
+        //vida del objetivo -= bala x armadura
+        objectiveLife -= bulletDamage * objectiveArmor;
+        //de float se convierte en int
+        objectiveLifeUI = (int)objectiveLife;
+        //convierte la informacion de int a string y las envia al canvas
+        missionObjetiveText.text = objectiveLifeUI.ToString();
     }
 }

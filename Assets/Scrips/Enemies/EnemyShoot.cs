@@ -5,40 +5,50 @@ using UnityEngine;
 public class EnemyShoot : MonoBehaviour
 {
     public GameObject enemyBullet;
-    public Transform spawnBulletPoint;
+    public Transform spawnBulletPoint;//de donde salen las balas
 
-    private Transform playerPosition;
-    private Enemy enemyfollow;
+    private Transform player;
+    bool followplayer;//variable boliana directa del Enemy
 
-    public float bulletSpeed;
+    public float bulletSpeed;//Veocidad a la que puede disparar
+
+    private float distanceToPlayer;//float de la distancia del vector entre el enemigo y el jugador
+    private float distanceToShootPlayer = 20;//Distancia minima para reaccionar
 
     void Start()
     {
         //busca al jugador y conseuimos su transform
-        playerPosition = FindAnyObjectByType<PlayerMove>().transform;
+        player = FindAnyObjectByType<PlayerMove>().transform;
 
-        enemyfollow = GetComponent<Enemy>();
-
-        Invoke("ShootEnemy", 3);
     }
 
     void Update()
     {
-        if(enemyfollow.followplayer == true){
-            //Invoke("ShootEnemy", .5f);
+        //de este objeto iguala la variable de enemy followplayer
+        followplayer = GetComponent<Enemy>().followplayer;
+        //de este objeto iguala la variable de enemy distanceToPlayer
+        distanceToPlayer = GetComponent<Enemy>().distanceToPlayer;
+
+        //si distacia al jugador es menor a distancia para disparar y seguir sea verdadera
+        if (distanceToPlayer <= distanceToShootPlayer && followplayer)
+        {
+            Debug.Log(distanceToPlayer);
+            ShootEnemy();
         }
     }
 
-    public void ShootEnemy(){
+    public void ShootEnemy()
+    {
 
-        Vector3 playerDirection = playerPosition.position - transform.position;
+        Vector3 playerDirection = player.position - transform.position;
 
         GameObject newbullet;
 
         newbullet = Instantiate(enemyBullet, spawnBulletPoint.position, spawnBulletPoint.rotation);
 
         newbullet.GetComponent<Rigidbody>().AddForce(playerDirection * bulletSpeed, ForceMode.Force);
+        
+        Destroy(newbullet, 5);
 
-        Invoke("ShootEnemy", .5f);
     }
 }

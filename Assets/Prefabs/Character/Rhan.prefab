@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2906799648420617404}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Thumb_Finger_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5648894102588292003}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Strap01_010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4176975070909319231}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Waterproof_03_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4953153491820151086}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.ElbowIK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5692844938096756178}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Strap02_002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,7 +166,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8767535909769408590}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Waterproof_05_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8608690975090316154}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Waterproof_01_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -228,7 +228,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8085179039550306043}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Waterproof_03_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8429565440113409982}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Waterproof_03_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -290,7 +290,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6934337172299517385}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Waterproof_03_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -321,7 +321,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6484501349478700133}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +353,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1401774582974835468}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Waterproof_01_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -384,7 +384,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8989290063709322840}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Middle_Finger_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,7 +416,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8872392126465272677}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Strap_Elbow_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -447,7 +447,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5442867370653239707}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Strap01_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -479,7 +479,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2855395980633235127}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.HandIK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -510,7 +510,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9090716845913382705}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Strap01_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -542,7 +542,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6341615265937185138}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Strap02_004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -573,7 +573,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 296443073749092737}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Waterproof_05_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -604,7 +604,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2310136892876083535}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Waterproof_03_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -635,7 +635,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2032042981176813698}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: C.Waterproof_02_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -666,7 +666,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 85927369010062058}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Thumb_Finger_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -697,7 +697,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6364111118721074605}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.KneeIK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -728,7 +728,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8037418960223539484}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Strap01_011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -760,7 +760,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 971645655747187020}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackBoneGrap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -791,7 +791,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5083265531356910532}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.HandIK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -822,7 +822,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8345144927719033210}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Waterproof_02_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -853,7 +853,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4995207428498214613}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -886,7 +886,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400585523692187276}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Waterproof_01_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -917,7 +917,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3376394475014770247}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: C.Waterproof_01_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -948,7 +948,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4314792018488711571}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Waterproof_02_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -979,7 +979,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5209305143180097390}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Strap01_002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1011,7 +1011,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5791673220622542193}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Waterproof_02_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1042,7 +1042,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1877044462029101008}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Waterproof_05_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1073,7 +1073,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5015321906906523736}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1111,7 +1111,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7027871525033863022}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Index_Finger_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1142,7 +1142,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2539840254401391975}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spine01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1181,7 +1181,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3487625775765141786}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Strap01_002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1213,7 +1213,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4940465867222315157}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Waterproof_01_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1244,7 +1244,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1753832532930268974}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SkirtC_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1290,7 +1290,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3100838603665718185}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: C.Waterproof_01_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1321,7 +1321,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6969518793441568589}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1356,7 +1356,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 563303746847859256}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Pocket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1387,7 +1387,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 64144811255459485}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: C.Waterproof_02_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1418,7 +1418,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7425906747710936340}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1458,7 +1458,8 @@ GameObject:
   - component: {fileID: 3887222651041223548}
   - component: {fileID: 8898618404553116807}
   - component: {fileID: 6906393521063252967}
-  m_Layer: 0
+  - component: {fileID: 8593690008956436098}
+  m_Layer: 9
   m_Name: Rhan
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1584,6 +1585,7 @@ MonoBehaviour:
   groudMask:
     serializedVersion: 2
     m_Bits: 64
+  target: {fileID: 8593690008956436098}
 --- !u!114 &3887222651041223548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1621,7 +1623,7 @@ MonoBehaviour:
   starPosition: {fileID: 0}
   weaponPrimary: {fileID: 0}
   weaponSecondary: {fileID: 0}
-  damage: 0
+  bulletDamage: 0
 --- !u!114 &6906393521063252967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1640,6 +1642,20 @@ MonoBehaviour:
   - {fileID: 0}
   hand: {fileID: 5093260149793905071}
   back: {fileID: 971645655747187020}
+--- !u!114 &8593690008956436098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2254822861242752993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 612bbf34d6fa9144588d41bca2920ed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetType: 0
+  priority: 1
 --- !u!1 &2328997401185549045
 GameObject:
   m_ObjectHideFlags: 0
@@ -1649,7 +1665,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8911443343447412793}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Waterproof_04_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1680,7 +1696,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4297848002926813604}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Waterproof_05_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1711,7 +1727,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2731160016507417871}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Waterproof_06_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1742,7 +1758,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7395873760975323407}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1773,7 +1789,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 522072460030783232}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Waterproof_06_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1804,7 +1820,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8151034557430741192}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Waterproof_04_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1835,7 +1851,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5568791578971546187}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Waterproof_04_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1866,7 +1882,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4738370652114138544}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: C.Waterproof_02_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1897,7 +1913,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7798017254899883599}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Strap01_007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1929,7 +1945,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1378545076945677090}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Strap02_007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1962,7 +1978,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3702200443796965209}
   - component: {fileID: 9158388347277369878}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Impermeable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2217,7 +2233,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3001757864819793132}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Waterproof_03_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2248,7 +2264,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1971095215976261276}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Waterproof_05_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2280,7 +2296,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6424254174959711698}
   - component: {fileID: 3784103227814854867}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bolsillo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2535,7 +2551,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7089126619504740288}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Strap02_007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2567,7 +2583,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1933328013342743423}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Waterproof_04_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2598,7 +2614,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6293588119978381618}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Pinky_Finger_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2629,7 +2645,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7923852413134087915}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Waterproof_06_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2660,7 +2676,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 269994198858628832}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Strap01_009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2692,7 +2708,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2007148225835585289}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hip_Control
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2737,7 +2753,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5035294085618792122}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Waterproof_07_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2768,7 +2784,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8596215836676816047}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Strap01_005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2799,7 +2815,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8637058031051536655}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Waterproof_04_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2830,7 +2846,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9130357083230108464}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Strap01_006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2862,7 +2878,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4211405025711664105}
   - component: {fileID: 9058985629137933084}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3117,7 +3133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1419234514174880734}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Strap02_006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3149,7 +3165,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7474211117975333282}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Waterproof_06_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3180,7 +3196,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6988584819081715435}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Strap02_009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3212,7 +3228,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3968861123405036961}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: C.Waterproof_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3243,7 +3259,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6957290519694994124}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Strap01_008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3275,7 +3291,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4768196905875793341}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: C.Waterproof_01_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3306,7 +3322,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8301953467353710407}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Waterproof_07_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3337,7 +3353,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2071530655461300164}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.UpperArmStrap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3368,7 +3384,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8227600471600202633}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Strap02_005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3399,7 +3415,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7676797628697496202}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Pocket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3430,7 +3446,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3957993619690131816}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Strap01_004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3461,7 +3477,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4224722560934769108}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Waterproof_02_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3492,7 +3508,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9129437088517171701}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Pinky_Finger_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3524,7 +3540,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7930960902600542779}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Middle_Finger_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3555,7 +3571,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7401218921829934499}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Strap01_005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3586,7 +3602,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 955314001763710653}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3618,7 +3634,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2986365047023934416}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Waterproof_05_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3649,7 +3665,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6964097848207441670}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3688,7 +3704,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 615280844012446695}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Waterproof_05_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3719,7 +3735,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7235919496426318345}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Waterproof_01_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3750,7 +3766,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7851143055521937294}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.UpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3783,7 +3799,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6013623382925294427}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Waterproof_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3814,7 +3830,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5093260149793905071}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HandBoneGrap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3845,7 +3861,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2708451380734944081}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Strap01_011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3877,7 +3893,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1808942469710394785}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spine_Control
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3909,7 +3925,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5211603511755731048}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Strap01_004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3940,7 +3956,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1417227288255416849}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Clavicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3972,7 +3988,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1695669038061773591}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Pinky_Finger_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4004,7 +4020,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4332584618977232238}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4035,7 +4051,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6708380340302543782}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: C.Waterproof_02_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4066,7 +4082,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5082270641285510177}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Waterproof_06_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4097,7 +4113,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6874491573337170145}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Waterproof_01_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4128,7 +4144,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4477649231628988636}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SkirtC_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4175,7 +4191,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8900965277868802915}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SkirtC_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4223,7 +4239,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7863175968203093537}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Thumb_Finger_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4255,7 +4271,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5584957844094023117}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Strap01_008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4287,7 +4303,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4516321903473586199}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Strap02_004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4318,7 +4334,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1320338822344086253}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.KneeIK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4350,7 +4366,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7063735594909591967}
   - component: {fileID: 2777154225990323987}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cabello
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4605,7 +4621,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 819262390245808521}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Middle_Finger_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4637,7 +4653,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1083031814745168753}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Waterproof_05_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4668,7 +4684,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3294335414140638346}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Strap02_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4700,7 +4716,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2377557648489901666}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Waterproof_06_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4731,7 +4747,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4923766644283216611}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Waterproof_04_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4762,7 +4778,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1019791489451868027}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Strap01_010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4794,7 +4810,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6473026592779696153}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Strap02_009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4826,7 +4842,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8648362856713791905}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.UpperArmStrap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4857,7 +4873,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 391196878121468287}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Strap02_002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4889,7 +4905,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3911615135238921595}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Strap02_005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4920,7 +4936,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9053589870755008509}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Middle_Finger_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4951,7 +4967,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2424123481772935137}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Pinky_Finger_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4983,7 +4999,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8045969709034104090}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Strap02_008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5016,7 +5032,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7986727337970329082}
   - component: {fileID: 3162396091254380869}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mochila
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5271,7 +5287,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4097988602314386458}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.UpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5304,7 +5320,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8491106787011188682}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Waterproof_04_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5335,7 +5351,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3038159081059716549}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Strap02_010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5367,7 +5383,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 210128104910034124}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Index_Finger_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5399,7 +5415,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 756743932132984611}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.ElbowIK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5430,7 +5446,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7968487043019899276}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5461,7 +5477,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1862316664971767207}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Strap_Elbow_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5492,7 +5508,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 740897709071027630}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Hip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5524,7 +5540,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9141550112431819682}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SpineBackPack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5556,7 +5572,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2249018172330525767}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Strap01_003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5588,7 +5604,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2554419949463747880}
   - component: {fileID: 8000892586018718367}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5843,7 +5859,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8932699658356207207}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Strap02_003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5875,7 +5891,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2286675203429399969}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Shin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5907,7 +5923,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3068523850759126720}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Waterproof_02_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5938,7 +5954,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6314409005438459742}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Thumb_Finger_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5970,7 +5986,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6154875176146872074}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Waterproof_02_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6001,7 +6017,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3003209827721802940}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Strap01_006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6032,7 +6048,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8243878051931633629}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Index_Finger_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6063,7 +6079,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7500282214723515911}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.ShinIK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6094,7 +6110,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5596876920061863333}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Waterproof_03_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6125,7 +6141,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2920896204208923582}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Strap01_007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6157,7 +6173,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 509664963067804371}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Waterproof_06_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6188,7 +6204,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4947704657135762410}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.ShinIK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6219,7 +6235,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4676791909126934108}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Waterproof_07_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6250,7 +6266,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2767264584099679841}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Strap01_009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6282,7 +6298,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2485385996427411830}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Strap01_003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6313,7 +6329,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7043848524999700921}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Waterproof_04_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6344,7 +6360,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 671703413128690425}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Rhan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6382,7 +6398,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6237167074350993625}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6417,7 +6433,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 820429488695710311}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Pinky_Finger_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6449,7 +6465,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8452238448806530458}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6481,7 +6497,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6098271297209651430}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Thumb_Finger_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6513,7 +6529,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 342546630061622674}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Hip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6545,7 +6561,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3384402014348671697}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6577,7 +6593,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2658168457775738445}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6609,7 +6625,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6165154924084524036}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Strap02_003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6641,7 +6657,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4316504472433469334}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Clavicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6673,7 +6689,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8762450111369635905}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Waterproof_03_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6704,7 +6720,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6952398379078373700}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Strap02_010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6736,7 +6752,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4694739058044208326}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Strap_Elbow_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6767,7 +6783,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5786728449025584896}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6798,7 +6814,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3032917255866931355}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SkirtC_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6844,7 +6860,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7677546606209103856}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Strap_Elbow_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6875,7 +6891,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7864256678892196816}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Strap02_006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6907,7 +6923,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6580607852273598545}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Shin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6939,7 +6955,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7471140995209212602}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Thumb_Finger_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6971,7 +6987,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8408009084991796318}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Waterproof_02_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7002,7 +7018,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6134729711639921162}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Middle_Finger_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7034,7 +7050,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 927938951352572224}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Strap02_008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7066,7 +7082,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 592745953283623866}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Strap02_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7098,7 +7114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 103321668576111659}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Waterproof_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7129,7 +7145,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4183537011514976096}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Index_Finger_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7161,7 +7177,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6925208754779996862}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Waterproof_02_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7192,7 +7208,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2152009392471656453}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Middle_Finger_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7224,7 +7240,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3482837294538995436}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Waterproof_07_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7255,7 +7271,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1281501788377922460}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Index_Finger_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7287,7 +7303,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2566107934343398681}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Pinky_Finger_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7318,7 +7334,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4339770068401661442}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R.Index_Finger_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7350,7 +7366,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1217084806759841584}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L.Waterproof_06_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

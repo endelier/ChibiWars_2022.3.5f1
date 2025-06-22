@@ -15,7 +15,7 @@ public class PlayerStatistics : MonoBehaviour
     //al iniciar el juego le pasa las estadisticas al GameManager y es todo lo que hace el codigo
     void Start()
     {
-        GameManager.Instance.healtPlayer = healt;
+        GameManager.Instance.healthPlayer = healt;
         GameManager.Instance.armorPlayer = armor;
     }
 
