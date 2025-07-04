@@ -13,7 +13,7 @@ public class PlayerAim : MonoBehaviour
     private Animator animator;//animador del personaje-se referencia en el Start
     private PlayerMove mover;//Codigo de mover del personaje-se referencia en el Start
 
-    public Crosshair crosshair;
+    public RECrosshairImage crosshair;
 
     //aim
     [Header("Aim")]
@@ -44,7 +44,7 @@ public class PlayerAim : MonoBehaviour
     void Start()
     {
 
-        crosshair = FindObjectOfType<Crosshair>();
+        crosshair = FindObjectOfType<RECrosshairImage>();
         animator = GetComponent<Animator>();
         mover = GetComponent<PlayerMove>();
     }

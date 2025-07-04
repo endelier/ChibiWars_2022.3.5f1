@@ -35,22 +35,29 @@ public class TargetTracker
             Vector3 dirToTarget = target.targetTransform.position - enemyposition.position;
             float distance = dirToTarget.magnitude;
 
+            int priority = target.GetPriority(enemyposition.position);
+            //prioridad es = a prioridad mayor o igual a 4
+            bool isHighPriority = priority >= 4;
+
             if (distance > detectionRadius)
             {
                 continue;
             }
 
-            if (Physics.Raycast(enemyposition.position, dirToTarget.normalized, distance, obstacleMask))
+            // Solo aplica raycast si no es prioridad alta
+            if (!isHighPriority && Physics.Raycast(enemyposition.position, dirToTarget.normalized, distance, obstacleMask))
+            {
                 continue;
+            }
 
-            int priority = target.GetPriority(enemyposition.position);
-
+            // es escoje el mas cercano
+            //if(distance < closestDistance || (Mathf.Approximately(distance, closestDistance) && priority > bestPriority))
+            //revisa el mejor objetivo o si tienen la misma prioridad envia al mas cercano y escoje el que tiene mayor prioridad
             if (priority > bestPriority || (priority == bestPriority && distance < closestDistance))
             {
                 bestTarget = target;
                 bestPriority = priority;
                 closestDistance = distance;
-
             }
         }
 

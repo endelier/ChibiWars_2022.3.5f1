@@ -15,8 +15,8 @@ public class Weapon : MonoBehaviour
     [Header("References")]
     private Animator weaponAnimator;//animador del arma-se referencia en el Start
     private AudioSource audioSource;//complemento que reproduce el sonido al dispara-se referencia en el Start
-    private AmmoCurrent municionCurrent;//texto que marca las balas que se pueden disparar
-    private AmmoMax municionMax;//texto que marca las balas en recerva
+    private REAmmonCurrentText municionCurrent;//texto que marca las balas que se pueden disparar
+    private REAmmonMaxText municionMax;//texto que marca las balas en recerva
 
     public AudioClip soundSource;//sonido al disparar
     [SerializeField]private GameObject bullet;//llama al objeto Arked bullet, o bala de Arked
@@ -45,8 +45,8 @@ public class Weapon : MonoBehaviour
     {
         aim = FindObjectOfType<PlayerAim>();//busca el comppnente PlayerAim del jugador
 
-        municionCurrent = FindAnyObjectByType<AmmoCurrent>();
-        municionMax = FindAnyObjectByType<AmmoMax>();
+        municionCurrent = FindAnyObjectByType<REAmmonCurrentText>();
+        municionMax = FindAnyObjectByType<REAmmonMaxText>();
 
         weaponAnimator = GetComponent<Animator>();//se referencia que el animator es de la misma arma
         audioSource = GetComponent<AudioSource>();//se referencia que el audiosource es de la misma arma

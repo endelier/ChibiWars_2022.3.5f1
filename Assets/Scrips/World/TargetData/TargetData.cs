@@ -34,20 +34,7 @@ public class TargetData
     //Devuelve la prioridad actual tomando en cuenta si el objetivo está provocando o es invisible.
     public int GetPriority(Vector3 enemyPosition)
     {
-        //si es invisible = 0---------------Esto no hace nada
-        /*if (isInvisible){
-            Debug.Log("Entro");
-            return 0;
-        }*/   
 
-        int priority = basePriority;
-
-        //----------------------------------Esto no hace nada
-        //si esta provocando y posision del enemigo y el objetivo probocando es menor al rango de provocacion
-        /*if (isProvoking && Vector3.Distance(enemyPosition, targetTransform.position) <= provokeRange)
-            //le da prioridad 10
-            priority += 10; // Puedes ajustar este valor como quieras
-        */
         return priority;
     }
 }

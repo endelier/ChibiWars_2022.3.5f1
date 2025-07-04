@@ -13,7 +13,7 @@ public class PatrolState : EnemyState
 
     public override void Enter()
     {
-
+        enemy.agent.stoppingDistance = 0f;
         // Busca un punto aleatorio al entrar
         patrolTarget = GetRandomPoint();
         enemy.agent.SetDestination(patrolTarget);
@@ -22,22 +22,23 @@ public class PatrolState : EnemyState
     //Actualiza el patrullaje del enemigo
     public override void Update()
     {
-        //float distanceToPlayer = Vector3.Distance(enemy.transform.position, enemy.player.transform.position);
-
-        // Si la distancia del jugador es menor a la variable de enemy. distancia a perseguir
-        /*if (distanceToPlayer < enemy.chaseDistance && !enemy.canCurrentlySeePlayer)
-        {
-            //el enemigo empieza a perseguir al jugador
-            enemy.TransitionToState(enemy.chaseState);
-            return;
-        }*/
-
         //si el enemigo esta alerta su radio de patrulla y velocidad se reduce 
         if (enemy.isAlerted)
         {
             patrolRadius = 12.5f;
             enemy.agent.speed = enemy.patrolAlertSpeed;
+        }
 
+        // Si llegó al punto de patrullaje, busca un nuevo punto de patrullaje Y NO ESTA EN ALERTA
+        if (!enemy.agent.pathPending && enemy.agent.remainingDistance < 1f && !enemy.isAlerted)
+        {
+            patrolTarget = GetRandomPoint();
+            enemy.agent.SetDestination(patrolTarget);
+        }
+
+        if (enemy.canCurrentlySeePlayer)
+        {
+            enemy.TransitionToState(enemy.chaseState);
         }
 
         // Si está en alerta, ya tomó decisión, y no ve al jugador
@@ -57,13 +58,7 @@ public class PatrolState : EnemyState
             }
         }
 
-        // Si llegó al punto de patrullaje, busca un nuevo punto de patrullaje
-        if (!enemy.agent.pathPending && enemy.agent.remainingDistance < 1f && !enemy.isAlerted)
-        {
-            patrolTarget = GetRandomPoint();
-            enemy.agent.SetDestination(patrolTarget);
-        }
-
+        // Si llegó al punto de patrullaje, busca un nuevo punto de patrullaje Y ESTA EN ALERTA
         float valor = Random.value;
         if (!enemy.agent.pathPending && enemy.agent.remainingDistance < 1f && enemy.isAlerted && valor >= (enemy.actionProbability + 0.3f))
         {

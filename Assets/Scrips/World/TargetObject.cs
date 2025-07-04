@@ -25,14 +25,17 @@ public class TargetObject : MonoBehaviour
         }
     }
 
+    //es obligatori esta funcion para asignar un nuevo valor a la prioridad
     public void SetPriority(int newPriority)
     {
         if (data != null)
         {
+            Debug.Log("enviando prio " + newPriority);
             data.priority = newPriority;
         }
     }
 
+    //se le da un nuevo tipo de target
     public void SetTargetType(TargetType newType)
     {
         if (data != null)

@@ -5,25 +5,28 @@ using UnityEngine;
 public class InvestigateState : EnemyState
 {
     private bool isLookingAround = false;
-    private bool investigating = false;
 
     public InvestigateState(EnemyAIController enemy) : base(enemy) { }
 
     public override void Enter()
     {
         enemy.agent.isStopped = true;
-        //isLookingAround = false;
-        enemy.StartCoroutine(LookAroundRoutine());
+        enemy.agent.stoppingDistance = 0f;
+        isLookingAround = false;
+//        enemy.StartCoroutine(LookAroundRoutine());
     }
 
     public override void Update()
     {
-        // Si ve al jugador, vuelve al combate
-        if (enemy.canCurrentlySeePlayer)
+        Debug.Log(isLookingAround);
+        if (enemy.currentTarget != null && enemy.currentTarget.priority >= 3)
         {
-            enemy.TransitionToState(enemy.shootState);
+            enemy.TransitionToState(enemy.attackObjectiveState);
         }
-        // Si terminó de mirar y no lo encontró, volverá a patrullar (esto se maneja al final de la rutina)
+        if(enemy.currentTarget==null && !isLookingAround || enemy.currentTarget !=null && !isLookingAround)
+        {
+            enemy.StartCoroutine(LookAroundRoutine());
+        }
     }
 
     public override void Exit()
@@ -35,6 +38,7 @@ public class InvestigateState : EnemyState
     {
         isLookingAround = true;
 
+        Debug.Log("iniciando corrutina");
         int steps = 6;
         float angleStep = 60f;
         float rotationSpeed = 180f; // grados por segundo
@@ -50,7 +54,6 @@ public class InvestigateState : EnemyState
             Quaternion startRotation = enemy.transform.rotation;
             Quaternion targetRotation = Quaternion.Euler(0, enemy.transform.eulerAngles.y + angleStep, 0);
 
-            float t = 0f;
             while (Quaternion.Angle(enemy.transform.rotation, targetRotation) > 1f)
             {
                 enemy.transform.rotation = Quaternion.RotateTowards(
@@ -66,11 +69,11 @@ public class InvestigateState : EnemyState
                     yield break;
                 }
             }
+            Debug.Log("girando");
 
             yield return new WaitForSeconds(0.3f); // pausa tras cada giro
         }
 
-        isLookingAround = false;
         enemy.TransitionToState(enemy.patrolState);
     }
 }

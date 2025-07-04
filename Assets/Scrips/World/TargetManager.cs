@@ -8,7 +8,7 @@ public class TargetManager : MonoBehaviour
     public static TargetManager Instance { get; private set; }
 
     // Lista privada que guarda todos los objetivos que tienen target 
-    public List<TargetData> targets = new List<TargetData>(); 
+    public List<TargetData> targets = new List<TargetData>();
 
     private void Awake()
     {

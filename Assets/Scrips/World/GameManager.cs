@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 using CI.QuickSave;
 using UnityEditor;
 using Unity.VisualScripting;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,10 +14,10 @@ public class GameManager : MonoBehaviour
     [Header("Game level")]
     public int level;
 
-    [SerializeField]private GameManagerData GMS;
+    [SerializeField] private GameManagerData GMS;
 
     [Header("Canvas")]//variable del canvas texs
-    public Text ammonText;
+    //public Text ammonText;
     public Text healthText;
     public Slider healthBar;
     //public Text missionObjetiveText;
@@ -40,7 +41,8 @@ public class GameManager : MonoBehaviour
 
 
     [Header("Mision")]
-    public int missionWin = 0;// 0=null, 1=win,2=lose
+    [HideInInspector] public int missionWin = 0;// 0=null, 1=win, 2=lose
+    private float secondToLoadScene = 5f;
 
     //otros
     private float contador;//Contador vidas jugador
@@ -113,18 +115,26 @@ public class GameManager : MonoBehaviour
 
     }
 
-    void Start()
-    {
-    }
-
     void Update()
     {
-        if (level == 1)
+        /*if (level == 1)
         {
             SaveHealth();
             Perder();
 
             //Debug.Log(contador);
+        }*/
+        if (missionWin == 1)
+        {
+            //si gana pasa 5 segundos para cargaar el siguiente nivel
+            StartCoroutine("WinGame");
+            Debug.Log("HAS GANADO");
+        }
+        if (missionWin == 2)
+        {
+            //si pierde pasa 5 segundos para cargaar el siguiente nivel
+            StartCoroutine("LoseGame");
+            Debug.Log("HAS PERDIDO");
         }
     }
 
@@ -145,6 +155,21 @@ public class GameManager : MonoBehaviour
         healthText.text = healthPlayerUI.ToString();
     }
 
+        IEnumerator WinGame()
+    {
+        yield return new WaitForSeconds(secondToLoadScene);
+
+        SceneManager.LoadScene(0);
+    }
+
+    IEnumerator LoseGame()
+    {
+        yield return new WaitForSeconds(secondToLoadScene);
+
+        SceneManager.LoadScene(0);
+    }
+
+
     //Si la vida es 0, se reinicia el nivel
     public void SaveHealth()
     {
@@ -154,19 +179,6 @@ public class GameManager : MonoBehaviour
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
-
-    //--------------------------------------------------Missions Functions---------------------------
-    //Defensa
-    /*//se Recive la informacion del daño de la bala y se le reduce a la vida del objetivo
-            public void HealthObjective(int bulletDamage)
-    {
-        //vida del objetivo -= bala x armadura
-        objectiveLife -= bulletDamage * objectiveArmor;
-        //de float se convierte en int
-        objectiveLifeUI = (int)objectiveLife;
-        //convierte la informacion de int a string y las envia al canvas
-        //missionObjetiveText.text = objectiveLifeUI.ToString();
-    }*/
 
     private void Perder()
     {

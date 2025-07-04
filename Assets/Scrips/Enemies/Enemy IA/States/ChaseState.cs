@@ -10,29 +10,49 @@ public class ChaseState : EnemyState
 
     public override void Enter()
     {
-        // Nada especial por ahora
+        enemy.agent.isStopped = true;
+        enemy.agent.speed = enemy.patrolRun;
+        enemy.agent.stoppingDistance = enemy.minChaseDistance;
     }
 
     //Actualiza el perseguir al jugador
     public override void Update()
     {
-        //distancia al jugador = vector3 Distancia(enemigo posicion, enemigo,variable(referecia), posicion)
-        //float distanceToPlayer = Vector3.Distance(enemy.transform.position, enemy.player.transform.position);
-
-        // Si el jugador se aleja, vuelve a patrullar
-        /*if (distanceToPlayer > enemy.chaseDistance * 1.5f)
+        //si no puede ver al jugador o no hay posiciondel jugador pasa a patrullaje
+        if (enemy.currentTarget == null || enemy.currentTarget.targetTransform == null)
         {
             enemy.TransitionToState(enemy.patrolState);
-            return;
-        }*/
+        }
 
-        Debug.Log("persiguiendo");
-        // Persigue al jugador
-        //enemy.agent.SetDestination(enemy.player.transform.position);
+        Transform target = enemy.currentTarget.targetTransform;
+        float distance = Vector3.Distance(enemy.transform.position, target.position);
+
+        //&& distance <= enemy.minChaseDistance
+        if (enemy.canCurrentlySeePlayer && distance <= enemy.minChaseDistance)
+        {
+            enemy.agent.isStopped = true;
+
+            //si esta en rango transiciona a disparo
+            enemy.TransitionToState(enemy.shootState);
+            return;
+        }
+
+        //si el jugador esta lejos persigue al jugador
+        if (distance > enemy.minChaseDistance && distance <= enemy.maxChaseDistance)
+        {
+            enemy.agent.isStopped = false;
+            enemy.agent.SetDestination(target.position);
+        }
+
+        if (!enemy.canCurrentlySeePlayer)
+        {
+            enemy.TransitionToState(enemy.investigateState);
+        }
+
     }
 
     public override void Exit()
     {
-        // Nada por ahora
+        enemy.agent.isStopped = false;
     }
 }

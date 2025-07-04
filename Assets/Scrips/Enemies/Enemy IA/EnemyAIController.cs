@@ -9,15 +9,18 @@ public class EnemyAIController : MonoBehaviour
     [Header("NavMesh")]
     public NavMeshAgent agent;
 
+    [Header("Vivo")]
+    public EnemyHealt enemylife;
+
     [Header("FOV (Field of View)")]
-    public float radius = 10f; //radio de deteccion tanto de vista como de TargetTracker
-    public float angle = 90f;
+    public float radiusView = 15f; //radio de deteccion tanto de vista como de TargetTracker
+    public float angleView = 90f;
     public LayerMask targetMask;     // Capa de objetivos como jugador, señuelos, estructuras, etc.
     public LayerMask obstacleMask;   // Capa de obstáculos que bloquean la visión
+    [HideInInspector] public bool canCurrentlySeePlayer = false;
 
     [Header("Objetivo")]
     public Transform player;
-
     public Transform objeto;
 
     [Header("Disparo")]
@@ -31,6 +34,7 @@ public class EnemyAIController : MonoBehaviour
     public ChaseState chaseState;
     public ShootState shootState;
     public InvestigateState investigateState;
+    public AttackObjectiveState attackObjectiveState;
 
     [Header("Patrol Variables")]
     [HideInInspector] public float patrolDefaultSpeed = 3.5f;//Velocidad Defaul del agente
@@ -40,9 +44,6 @@ public class EnemyAIController : MonoBehaviour
     [Header("Alert")]
     public bool isAlerted = false;
 
-    [Header("Ver al jugador")]
-    // Visión del jugador
-    [HideInInspector] public bool canCurrentlySeePlayer = false;
 
     [Header("Cover Settings")]
     public CoverPoint currentCoverPoint;
@@ -50,12 +51,17 @@ public class EnemyAIController : MonoBehaviour
     [HideInInspector] public float actionProbability = 0.5f;
     public bool hasMadeCoverDecision = false;
 
+    [Header("Chase Settings")]
+    public float minChaseDistance = 7f;
+    public float maxChaseDistance = 15f;
     public bool tope = false;
 
     [Header("Target System")]
     // Sistema de prioridad de objetivos encapsulado-------------preguntar como funciona
     public TargetTracker targetTracker;
     public TargetData currentTarget => targetTracker?.currentTarget;
+
+    public float targetDetectionRadius = 50f;
 
 
     void Start()
@@ -66,53 +72,87 @@ public class EnemyAIController : MonoBehaviour
         shootState = new ShootState(this);
         seekCoverState = new SeekCoverState(this);
         investigateState = new InvestigateState(this);
+        attackObjectiveState = new AttackObjectiveState(this);
 
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
-        //objeto = GameObject.FindAnyObjectByType<MissionObjective>().transform;
-
         // Inicializar el TargetTracker
-        targetTracker = new TargetTracker(transform, radius, obstacleMask);
+        targetTracker = new TargetTracker(transform, targetDetectionRadius, obstacleMask);
 
-        /*if (objeto != null)
+        //espera un poco para que los targets sean registrados en el TargetManager
+        //StartCoroutine(DelayedStartLogic());
+
+        targetTracker.UpdateTarget();
+
+        if (currentTarget != null)
         {
-            agent.SetDestination(objeto.transform.position);
-            TransitionToState(chaseState);
-        }*/
-        /*else
+            Debug.Log("Target encontrado: " + currentTarget.targetTransform);
+        }
+        else{
+            Debug.Log("Target no encontrado"+currentTarget);
+        }
+
+        if (currentTarget != null && currentTarget.priority >= 4)
         {
-            // Empezar en estado de patrulla
+            TransitionToState(attackObjectiveState);
+        }
+        else
+        {
             TransitionToState(patrolState);
-        }*/
-        TransitionToState(patrolState);
+        }
 
         // Iniciar la rutina de visión
         StartCoroutine(FOVRoutine());
+
+    }
+
+    private IEnumerator DelayedStartLogic()
+    {
+        // Esperar 1 frame para que los TargetObject se registren
+        yield return new WaitForSeconds(1f);
+
+        targetTracker.UpdateTarget();
+
+        if (currentTarget != null)
+        {
+            Debug.Log("Target encontrado: " + currentTarget.targetTransform);
+        }
+        else{
+            Debug.Log("Target no encontrado"+currentTarget);
+        }
+
+        if (currentTarget != null && currentTarget.priority >= 4)
+        {
+            TransitionToState(attackObjectiveState);
+        }
+        else
+        {
+            TransitionToState(patrolState);
+        }
     }
 
     void Update()
     {
-        // Actualiza objetivo actual con prioridades dinámicas
-        targetTracker.UpdateTarget();
-
-        // Actualiza lógica del estado actual
-        currentState.Update();
-
-        // Actualiza si el objetivo actual está dentro del campo de visión
-        canCurrentlySeePlayer = CheckFieldOfView();
-
-        // Si ve al objetivo o fue dañado, pasa a disparar
-        if (canCurrentlySeePlayer)
+        //si el enemigo esta vivo hace cosas
+        if (enemylife.life)
         {
-            TransitionToState(shootState);
-        }
-        if (isAlerted && !tope)
-        {
-            radius = 15;
-            angle = 60;
-            targetTracker.detectionRadius = radius;
-            StartCoroutine(AlertDecisionRoutine());
-            tope = true;
+            // Actualiza objetivo actual con prioridades dinámicas
+            targetTracker.UpdateTarget();
+
+            // Actualiza lógica del estado actual
+            currentState.Update();
+
+            // Actualiza si el objetivo actual está dentro del campo de visión
+            canCurrentlySeePlayer = CheckFieldOfView();
+
+            if (isAlerted && !tope)
+            {
+                radiusView = 25;
+                angleView = 120;
+                //targetTracker.detectionRadius = radiusView;
+                StartCoroutine(AlertDecisionRoutine());
+                tope = true;
+            }
         }
     }
 
@@ -141,7 +181,7 @@ public class EnemyAIController : MonoBehaviour
         float distanceToTarget = Vector3.Distance(transform.position, currentTarget.targetTransform.position);
 
         // Verifica que el objetivo esté dentro del ángulo de visión
-        if (Vector3.Angle(transform.forward, directionToTarget) < angle / 2f)
+        if (distanceToTarget <= radiusView && Vector3.Angle(transform.forward, directionToTarget) < angleView / 2f)
         {
             // Verifica que no haya obstáculos
             if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, obstacleMask))
@@ -157,7 +197,7 @@ public class EnemyAIController : MonoBehaviour
     }
 
     //funcion para rotar hacia donde ve el jugador
-    private void LookAt(Vector3 position)
+    public void LookAt(Vector3 position)
     {
         Vector3 direction = (position - transform.position).normalized;
         direction.y = 0; // Evitar inclinación vertical

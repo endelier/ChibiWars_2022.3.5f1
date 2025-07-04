@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class EnemyHealt : MonoBehaviour
 {
-    [SerializeField]private int healt = 3;
+    [SerializeField]private int baseHealt;
+    [SerializeField]private int healt;
+    
     public bool life = true;
 
     public EnemyAIController enemy;
 
+    void Start(){
+        healt=baseHealt;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (healt <= 3)
+        if (healt <= 0)
         {
             life = false;
             enemy.AlertNearbyEnemies(transform.position, 10f);
@@ -34,11 +40,17 @@ public class EnemyHealt : MonoBehaviour
 
             //destruye la bala
             collision.gameObject.SetActive(false);
-
-            //StartCoroutine(AlertDecisionRoutine());
             
             healt--;
 
         }
+    }
+
+    public void Revivir()
+    {
+        life = true;
+        healt = baseHealt;
+        enemy.agent.isStopped = false;
+        GetComponent<Renderer>().material.color = new Color(255, 255, 255);
     }
 }
